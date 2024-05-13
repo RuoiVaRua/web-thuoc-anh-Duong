@@ -29,10 +29,13 @@ function appendContent(url, targetSelector) {
   
   appendContent('./components/topbar.html', '.main-wrapper');
   appendContent('./components/header.html', '.main-wrapper');
-  appendContent('./components/home-slider.html', '.main-wrapper');
   appendContent('./components/footer.html', '.main-wrapper');
 
   if (!currentPage || currentPage === 'home') {
+    appendContent('./components/home-slider.html', '.main-wrapper');
     appendContent('./pages/home.html', '.main-wrapper');
+  }
+  else if (['about', 'contact', 'products'].includes(currentPage)) {
+    appendContent(`./pages/${currentPage}.html`, '.main-wrapper');
   }
   
