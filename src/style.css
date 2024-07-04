@@ -2,18 +2,25 @@
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box; /* Firefox, other Gecko */
     box-sizing: border-box; /* Opera/IE 8+ */
-    transition: all ease 0.5s;
     padding: 0px;
     margin: 0px;    
+
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    background-color: transparent;
 }
 
 :root {
+    --announcement-bar-height: 56px;
+    --container-max-width: 1200px;
+    --header-height: 120px;
 }
 
 html,
 body {
     height: 100%;
     width: 100%;
+    font-size: 16px;
 }
 
 #app {
@@ -23,10 +30,19 @@ body {
 
 button {
     cursor: pointer;
+    border: none;
+    background-color: transparent;
+    outline: none;
 }
 
 a {
     text-decoration: none;
+    color: black;
+}
+
+a:visited,
+a:active {
+    color: black;
 }
 
 ul {
@@ -34,5 +50,12 @@ ul {
 }
 
 li {
-    display: inline;
+    display: inline-block;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    border: 0;
 }

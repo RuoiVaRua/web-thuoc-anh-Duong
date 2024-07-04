@@ -1,23 +1,25 @@
 <template>
-    <div class="announcement-bar">
-        <div class="left">
-            <span>Thành Tín - Thân Thiện - An Toàn</span>
-        </div>
-        <div class="right">
-            <aside>
-                <span><font-awesome-icon :icon="['fas', 'phone-volume']" /> 0972086234</span>
-                <span><font-awesome-icon :icon="['fas', 'envelope']" /> dailongjsc.vn@gmail.com</span>
-            </aside>
-            <aside>
-                <ul>
-                    <li><img :src="zaloImg" alt="Zalo" width="20" height="20"/></li>
-                    <li><font-awesome-icon :icon="['fab', 'facebook']" /></li>
-                    <li><font-awesome-icon :icon="['fab', 'instagram']" /></li>
-                    <li><font-awesome-icon :icon="['fab', 'square-x-twitter']" /></li>
-                    <li><font-awesome-icon :icon="['fab', 'square-youtube']" /></li>
-                    <li><font-awesome-icon :icon="['fab', 'square-whatsapp']" /></li>
-                </ul>
-            </aside>
+    <div class="announcement-bar-container">
+        <div class="announcement-bar">
+            <div class="left">
+                <span>Thành Tín - Thân Thiện - An Toàn</span>
+            </div>
+            <div class="right">
+                <aside>
+                    <a href="tel:0972086234"><font-awesome-icon :icon="['fas', 'phone-volume']" /> 0972086234</a>
+                    <a href="mailto:dailongjsc.vn@gmail.com"><font-awesome-icon :icon="['fas', 'envelope']" /> dailongjsc.vn@gmail.com</a>
+                </aside>
+                <aside>
+                    <ul>
+                        <li><img :src="zaloImg" alt="Zalo" width="20" height="20"/></li>
+                        <li><font-awesome-icon :icon="['fab', 'facebook']" /></li>
+                        <li><font-awesome-icon :icon="['fab', 'instagram']" /></li>
+                        <li><font-awesome-icon :icon="['fab', 'square-x-twitter']" /></li>
+                        <li><font-awesome-icon :icon="['fab', 'square-youtube']" /></li>
+                        <li><font-awesome-icon :icon="['fab', 'square-whatsapp']" /></li>
+                    </ul>
+                </aside>
+            </div>
         </div>
     </div>
 </template>
@@ -35,16 +37,127 @@ export default {
 };
 </script>
 
-<style scoped>
-    .announcement-bar {
-        display: flex;
-        align-items: center;
+<style lang="scss" scoped>
+    .announcement-bar-container {
         background: #252628;
         color: #fff;
-        padding-right: 15px;
-        padding-left: 15px;
-        position: relative;
-        margin: 0 auto;
-        max-width: 1200px;        
+        .announcement-bar {
+            display: flex;
+            align-items: center;
+            padding-right: 15px;
+            padding-left: 15px;
+            position: relative;
+            margin: 0 auto;
+            max-width: 1200px;  
+
+            &::before {
+                background: #007338;
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -95%;
+                display: block;
+                z-index: 0;
+                height: 100%;
+                width: 100%;                
+            }
+            
+            & > div {
+                position: relative;
+                min-height: 1px;
+                padding: 11px 15px;
+                float: left;
+                z-index: 1;
+            }
+            
+            .left {
+                width: 33.33333333%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: var(--announcement-bar-height);
+
+                &::before, &::after {
+                    background: #007338;
+                    width: calc(100% + 15px);
+                    left: -15px;
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    height: 100%;
+                    z-index: -1;
+                    transform: skew(-26deg);
+                    padding-left: 20px;                    
+                }
+
+                &::after {
+                    left: 0;
+                    opacity: .2;
+                    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=20)";
+                    filter: alpha(opacity=20);
+                }
+
+                span {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+            }
+        
+            .right {
+                width: 66.66666667%;
+                text-align: right;
+
+                aside {
+                    clear: both;
+                    word-wrap: break-word;
+                    display: inline-block;
+                }
+
+                aside:first-child {
+                    margin-right: 30px;
+                    position: relative;
+
+                    &::after {
+                        background: #fff;
+                        content: '';
+                        position: absolute;
+                        right: -30px;
+                        top: 50%;
+                        margin-top: -11px;
+                        width: 1px;
+                        height: 24px;
+                        display: block;
+                        z-index: 1;
+                        opacity: .6;
+                    }
+
+                    a {
+                        color: white;
+
+                        &:first-child {
+                            margin-right: 20px;
+                        }
+
+                        & > :first-child {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                aside:last-child {
+                    padding-left: 15px;
+
+                    li {
+                        vertical-align: middle;
+                        margin: 5px 10px;
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+        }
     }
+
 </style>
