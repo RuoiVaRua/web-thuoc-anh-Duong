@@ -37,12 +37,12 @@ button {
 
 a {
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
 
 a:visited,
 a:active {
-    color: black;
+    color: inherit;
 }
 
 ul {

@@ -4,7 +4,7 @@
         <header class="header">
             <div class="logo">
                 <a href="/">
-                    <img :src="viteImg" alt="">
+                    <img src="/images/VIỆT HƯNG (1).png" alt="">
                 </a>
             </div>
             <nav>
@@ -22,7 +22,6 @@
 
 <script>
 import AnnouncementBar from './AnnouncementBar.vue';
-import viteImg from '@/assets/vite.svg';
 
 export default {
     name: "Header",
@@ -31,7 +30,6 @@ export default {
     },
     data() {
         return {
-            viteImg: viteImg
         }
     },
 };
@@ -64,7 +62,7 @@ export default {
             transform: translate3d(0px, 0px, 0px);
             // animation property order
             // duration | easing-function or timing-function | delay | iteration-count | direction | fill-mode | play-state | name
-            animation: 5s ease 1s 1 normal both running loadingBar;
+            animation: 8s ease 2s infinite normal both running loadingBar;
         }
 
         header {
@@ -83,10 +81,11 @@ export default {
                     height: 100%;
 
                     img {
-                        width: auto;
+                        width: 100%;
                         height: 100%;
                         display: block;
                         margin: 0 auto;
+                        object-fit: cover;
                     }
                 }
             }
