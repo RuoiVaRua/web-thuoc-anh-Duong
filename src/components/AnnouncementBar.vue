@@ -1,10 +1,10 @@
 <template>
     <div class="announcement-bar-container">
         <div class="announcement-bar">
-            <div class="left">
+            <div class="left-section">
                 <span>Thành Tín - Thân Thiện - An Toàn</span>
             </div>
-            <div class="right">
+            <div class="right-section">
                 <aside>
                     <a href="tel:0972086234"><font-awesome-icon :icon="['fas', 'phone-volume']" /> 0972086234</a>
                     <a href="mailto:dailongjsc.vn@gmail.com"><font-awesome-icon :icon="['fas', 'envelope']" /> dailongjsc.vn@gmail.com</a>
@@ -70,7 +70,7 @@ export default {
                 z-index: 1;
             }
             
-            .left {
+            .left-section {
                 width: 33.33333333%;
                 display: flex;
                 align-items: center;
@@ -103,7 +103,7 @@ export default {
                 }
             }
         
-            .right {
+            .right-section {
                 width: 66.66666667%;
                 text-align: right;
 

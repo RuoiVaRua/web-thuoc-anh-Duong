@@ -3,45 +3,60 @@
         "id": 1,
         "name": "Cây Bồ Công Anh",
         "image": [
-            "/images/"
+            "/images/BỒ CÔNG ANH/bo-cong-anh-364-1.jpg",
+            "/images/BỒ CÔNG ANH/bo-cong-anh-364-2.jpg",
+            "/images/BỒ CÔNG ANH/bo-cong-anh-364-3.jpg",
+            "/images/BỒ CÔNG ANH/Bo-cong-anh-say-kho-1024x768.jpg",
+            "/images/BỒ CÔNG ANH/bồ-công-anh.jpg",
+            "/images/BỒ CÔNG ANH/la-bo-cong-anh-kho-1.jpg"
         ],
         "price": 150000,
+        "unit": "kg",
         "description": "Cây Bồ Công Anh – Tên tiếng Anh là Dandelion. Là loại cây mọc dại nhưng bồ công anh lại có tác dụng chống viêm, giảm đau, hỗ trợ chữa bệnh đau dạ dày, sưng tấy và thải độc cho gan. Cây nhỏ, cao 0,60m đến 1m, có thể cao tới 3m. Thân mọc thẳng, nhẵn, không cành hoặc rất ít cành đôi khi có đốm tía. Lá mọc so le, có nhiều hình dạng; lá phía dưới dài 30cm, rộng 5-6cm, gần như không cuống, chia thành nhiều thùy hay răng cưa to thô, lá phía trên ngắn hơn, nguyên chứ không chia thùy, mép có răng cưa thưa. Thân và lá đều chứa nhũ dịch màu trắng đục như sữa, vị hơi đắng."
     },
     {
         "id": 2,
         "name": "Lá Sen",
         "image": [
-            "/images/"
+            "/images/LÁ SEN/la-sen.jpg",
+            "/images/LÁ SEN/lá-sen.jpg"
         ],
         "price": 200000,
+        "unit": "kg",
         "description": "Lá sen (còn gọi là Liên Diệp) từ lâu đã được Y học cổ truyền sử dụng làm thuốc chữa bệnh. Lá sen có công dụng an thần cho giấc ngủ ngon, hỗ trợ tốt cho người giảm cân, giúp hạ cholesterol trong máu, điều trị gan nhiễm mỡ và ổn định huyết áp. Trà lá sen có công dụng hạ mỡ máu, giảm mỡ trong cơ thể, phòng ngừa và hỗ trợ điều trị chứng bệnh béo phì. Trà lá sen làm mát gan, tăng cường chức năng gan. Hỗ trợ điều trị người mắc bệnh gan nhiễm mỡ. Trà lá sen giúp tăng lưu lượng tuần hoàn não, giảm căng thẳng mệt mỏi, an thần, giúp giấc ngủ sâu và ngon giấc."
     },
     {
         "id": 3,
         "name": "Tam Thất Bắc",
         "image": [
-            "/images/"
+            "/images/TAM THẤT BẮC/cây-tam-thất-bắc.jpg",
+            "/images/TAM THẤT BẮC/cu-tam-that-bac1.jpg"
         ],
         "price": 300000,
+        "unit": "kg",
         "description": "Tam thất bắc còn gọi là điền thất nhân sâm là loại cây dược liệu quý của Việt Nam. Cây tam thất bắc có tác dụng bổ khí huyết, tiêu sưng, giảm đau, cầm máu. Thường dùng trong các trường hợp suy nhược cơ thể, mất ngủ, đau đầu, đau bụng kinh, chảy máu cam. Rễ củ tam thất bắc hình thoi hoặc hình con quay, dài 3-10cm, đường kính 1-2cm. Vỏ ngoài màu nâu xám hoặc nâu đen, có vân dọc và các nốt sần nhỏ. Thịt củ màu trắng hoặc hơi vàng, vị đắng, hơi ngọt."
     },
     {
         "id": 4,
         "name": "Xạ Đen",
         "image": [
-            "/images/"
+            "/images/XẠ ĐEN/cây-xạ-đen.jpg",
+            "/images/XẠ ĐEN/dược-liệu-xạ-đen.jpg",
+            "/images/XẠ ĐEN/xa-den-dong-goi-900x818.jpg",
+            "/images/XẠ ĐEN/xạ-đen.jpg"
         ],
         "price": 250000,
+        "unit": "kg",
         "description": "Cây xạ đen có vị đắng chát, tính hàn, có tác dụng hữu hiệu trong điều trị mụn nhọt, ung thư, tiêu viêm, giải độc, giảm tiết dịch, tăng cường sức đề kháng của cơ thể. Hiện nay, xạ đen là loại cây được sử dụng trong Đông Y và Tây y để giúp hỗ trợ chữa trị các bệnh liên quan đến ung thư, các khối u rất hiệu quả. Đã có nhiều nghiên cứu khoa học chứng minh tác dụng phòng và hỗ trợ điều trị ung thư của cây xạ đen. Khoa học đã chứng minh cây xạ đen chữa bệnh viêm gan, sơ gan hoặc những người mắc các bệnh về gan rất tốt."
     },
     {
         "id": 5,
         "name": "Hạt Sen",
         "image": [
-            "/images/"
+            "/images/HẠT SEN/hat-sen.jpg"
         ],
         "price": 250000,
+        "unit": "kg",
         "description": "Đặc điểm sản phẩm: Hạt hình trái xoan. Mặt ngoài còn màng mỏng màu nâu, có nhiều đường vân dọc. Ở đầu trên có núm màu nâu sẫm. Bóc màng ngoài màu nâu để lộ hai lá mầm bằng nhau và xếp úp vào nhau, màu trắng ngà, hạt chứa nhiều tinh bột. Giữa hai lá mầm có hai đường rãnh dọc đối xứng nhau. Chồi mầm màu xanh lục, nằm ở giữa đường rãnh dọc của hai lá mầm."
     }
 ]

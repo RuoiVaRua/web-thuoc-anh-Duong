@@ -5,7 +5,7 @@
             v-for="product in products"
             :key="product.id"
         >
-            <img :src="product.image" :alt="product.name" />
+            <img :src="product.image[0]" :alt="product.name" />
 
             <div class="name-price-contact">
                 <h3 class="name">
@@ -13,10 +13,10 @@
                 </h3>
 
                 <span class="price">
-                    {{ product.price }}
+                    {{ formatCurrencyVND(product.price) + " / " + product.unit }}
                 </span>
 
-                <a class="contact" href="https://zalo.me/0817790401"
+                <a class="contact" href="https://zalo.me/0817790401" target="_blank"
                     >Liên Hệ Mua Hàng</a
                 >
             </div>
@@ -25,11 +25,14 @@
 </template>
 
 <script>
+import { formatCurrencyVND } from '../utils/price';
+
 export default {
     name: "ProductsList",
     data() {
         return {
             products: [],
+            formatCurrencyVND
         };
     },
     created() {
@@ -62,7 +65,8 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 15px;
+        width: calc((100% - (30px * 2)) / 3);
+        background-color: #eee;
 
         img {
             object-fit: cover;
@@ -76,6 +80,7 @@ export default {
             align-items: center;
             gap: 15px;
             padding: 15px 0;
+            width: 100%;
 
             .name {
                 display: block;
@@ -108,6 +113,13 @@ export default {
                 text-align: center;
                 border: 1px solid #2a7d2e;
                 color: #2a7d2e;
+                transition: all ease 0.4s;
+
+                &:hover {
+                    background: #2a7d2e;
+                    color: #fff;
+                    transition: all ease 0.4s;
+                }
             }
         }
     }

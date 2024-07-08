@@ -12,8 +12,8 @@
                 <ul class="main-menu">
                     <li><router-link active-class="active" to="/">Trang chủ</router-link></li>
                     <li><router-link active-class="active" to="/about">Giới thiệu</router-link></li>
-                    <li><router-link active-class="active" to="/about">Sản phẩm</router-link></li>
-                    <li><router-link active-class="active" to="/about">Liên hệ</router-link></li>
+                    <!-- <li><router-link active-class="active" to="/products">Sản phẩm</router-link></li> -->
+                    <li><router-link active-class="active" to="/contact">Liên hệ</router-link></li>
                 </ul>
             </nav>
         </header>
@@ -73,7 +73,7 @@ export default {
             align-items: center;
 
             .logo {
-                flex: 1;
+                flex: 3;
                 height: 100%;
 
                 a {
@@ -82,6 +82,7 @@ export default {
 
                     img {
                         width: 100%;
+                        max-width: 400px;
                         height: 100%;
                         display: block;
                         margin: 0 auto;
@@ -91,7 +92,7 @@ export default {
             }
 
             nav {
-                flex: 2;
+                flex: 5;
 
                 .main-menu {
                     display: flex;
@@ -131,7 +132,7 @@ export default {
                                 position: relative;
 
                                 &::before {
-                                    width: 50%;
+                                    width: 80%;
                                     height: 2px;
                                     content: '';
                                     position: absolute;
