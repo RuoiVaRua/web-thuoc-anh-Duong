@@ -8,7 +8,6 @@
                 </a>
             </div>
             <nav>
-                <div class="sticky-menu"></div>
                 <ul class="main-menu">
                     <li><router-link active-class="active" to="/">Trang chủ</router-link></li>
                     <li><router-link active-class="active" to="/about">Giới thiệu</router-link></li>
@@ -32,6 +31,14 @@ export default {
         return {
         }
     },
+    methods: {
+        handleStickyMenu: function () {
+            var scrollTop = (document.documentElement || document.body.parentNode || document.body).scrollTop;
+            if (scrollTop && scrollTop > (56 + 120)) {
+
+            }
+        }
+    }
 };
 </script>
 
@@ -62,7 +69,7 @@ export default {
             transform: translate3d(0px, 0px, 0px);
             // animation property order
             // duration | easing-function or timing-function | delay | iteration-count | direction | fill-mode | play-state | name
-            animation: 8s ease 2s infinite normal both running loadingBar;
+            animation: 20s ease 2s infinite normal both running loadingBar;
         }
 
         header {

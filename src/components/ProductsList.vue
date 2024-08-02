@@ -5,12 +5,14 @@
             v-for="product in products"
             :key="product.id"
         >
-            <img :src="product.image[0]" :alt="product.name" />
+            <a class="name">
+                <img :src="product.image[0]" :alt="product.name" />
+            </a>
 
             <div class="name-price-contact">
-                <h3 class="name">
+                <a class="name">
                     {{ product.name }}
-                </h3>
+                </a>
 
                 <span class="price">
                     {{ formatCurrencyVND(product.price) + " / " + product.unit }}
@@ -59,7 +61,7 @@ export default {
     justify-content: center;
     gap: 30px;
     max-width: var(--container-max-width);
-    margin: 0 auto;
+    margin: 30px auto;
 
     .product-image {
         display: flex;

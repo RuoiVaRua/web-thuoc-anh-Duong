@@ -33,8 +33,7 @@ export default {
         align-items: center;
         gap: 20px;
         max-width: var(--container-max-width);
-        margin: 0 auto;
-        margin-top: 30px;
+        margin: 30px auto;
 
 
         .title-container {
@@ -84,6 +83,12 @@ export default {
             padding-right: 20px;
             border-radius: 5px;
             border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.1);
+            transition: background-color ease 0.4s;
+
+            &:hover {
+                color: #f7f7f7;
+                background-color: #5f9434;
+            }
         }
     }
 </style>

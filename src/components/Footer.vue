@@ -118,6 +118,7 @@ export default {
                         line-height: 30px;
                         padding-left: 0;
                         transition: all ease 0.4s;
+                        cursor: pointer;
 
                         &:hover {
                             color: #2a7d2e;
