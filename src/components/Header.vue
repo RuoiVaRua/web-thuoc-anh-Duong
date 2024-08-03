@@ -1,6 +1,6 @@
 <template>
     <AnnouncementBar/>
-    <div class="header-container">
+    <div ref="headerRef" class="header-container">
         <header class="header">
             <div class="logo">
                 <a href="/">
@@ -21,23 +21,58 @@
 
 <script>
 import AnnouncementBar from './AnnouncementBar.vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+import debounce from '../utils/debounce';
 
 export default {
-    name: "Header",
     components: {
         AnnouncementBar
     },
-    data() {
-        return {
-        }
-    },
-    methods: {
-        handleStickyMenu: function () {
-            var scrollTop = (document.documentElement || document.body.parentNode || document.body).scrollTop;
-            if (scrollTop && scrollTop > (56 + 120)) {
 
+    setup() {
+        const headerRef = ref(null);
+        let observer = null;
+
+        const handleIntersection = (entries) => {
+            entries.forEach(entry => {
+                if (entry.boundingClientRect.top < -120) {
+                    headerRef.value.classList.add('sticky-menu');
+                } else {
+                    headerRef.value.classList.remove('sticky-menu');
+                }
+            });
+        };      
+
+        function handleStickyMenu () {
+            var scrollTop = (document.documentElement || document.body.parentNode || document.body).scrollTop;
+            if (scrollTop && scrollTop > (56 + 120) && headerRef.value) {
+                headerRef.value.classList.add('sticky-menu');
+            } else if (headerRef.value) {
+                headerRef.value.classList.remove('sticky-menu');
             }
         }
+
+        onMounted(() => {
+            // window.addEventListener('scroll', debounce(handleStickyMenu, 1000));
+            if (headerRef.value) {
+                observer = new IntersectionObserver(handleIntersection, {
+                    root: null, // sử dụng viewport như root
+                    threshold: 0 // trigger ngay khi header trượt khỏi 200px viewport
+                });
+
+                observer.observe(headerRef.value);
+            }
+        });
+
+        onBeforeUnmount(() => {
+            if (observer && headerRef.value) {
+                observer.unobserve(headerRef.value);
+            }
+        });        
+
+        return {
+            headerRef
+        };
     }
 };
 </script>
@@ -56,6 +91,19 @@ export default {
         background: white;
         height: var(--header-height);
         position: relative;
+
+        &.sticky-menu {
+            header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100vw;
+                height: var(--header-height);
+                z-index: 1000;
+                background: white;
+            }
+        }        
 
         &::after {
             content: '';
@@ -80,7 +128,7 @@ export default {
             align-items: center;
 
             .logo {
-                flex: 3;
+                flex: 1;
                 height: 100%;
 
                 a {
@@ -99,7 +147,7 @@ export default {
             }
 
             nav {
-                flex: 5;
+                flex: 1;
 
                 .main-menu {
                     display: flex;
