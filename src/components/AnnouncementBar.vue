@@ -41,6 +41,11 @@ export default {
     .announcement-bar-container {
         background: #252628;
         color: #fff;
+
+        li {
+            display: inline-block;
+        }
+        
         .announcement-bar {
             display: flex;
             align-items: center;

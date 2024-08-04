@@ -5,12 +5,12 @@
             v-for="product in products"
             :key="product.id"
         >
-            <a class="name">
-                <img :src="product.image[0]" :alt="product.name" />
+            <a class="name" :href="'/product/' + product.id">
+                <img :src="product.images[0]" :alt="product.name" />
             </a>
 
             <div class="name-price-contact">
-                <a class="name">
+                <a class="name" :href="'/product/' + product.id">
                     {{ product.name }}
                 </a>
 
@@ -18,7 +18,10 @@
                     {{ formatCurrencyVND(product.price) + " / " + product.unit }}
                 </span> -->
 
-                <a class="contact" href="https://zalo.me/0817790401" target="_blank"
+                <a
+                    class="contact"
+                    href="https://zalo.me/0817790401"
+                    target="_blank"
                     >Liên Hệ Mua Hàng</a
                 >
             </div>
@@ -27,29 +30,21 @@
 </template>
 
 <script>
-import { formatCurrencyVND } from '../utils/price';
+import { formatCurrencyVND } from "../utils/price";
+import { mapGetters } from "vuex";
 
 export default {
     name: "ProductsList",
-    data() {
-        return {
-            products: [],
-            formatCurrencyVND
-        };
-    },
-    created() {
-        this.fetchData();
+    name: "ProductsList",
+    computed: {
+        ...mapGetters(["allProducts"]), // Map getter to get products
+        products() {
+            return this.allProducts; // Use getter to get products
+        }
     },
     methods: {
-        async fetchData() {
-            try {
-                const response = await fetch("/data.json");
-                this.products = await response.json();
-            } catch (error) {
-                console.error("Error fetching data:", error);
-            }
-        },
-    },
+        formatCurrencyVND,
+    }
 };
 </script>
 
