@@ -1,21 +1,23 @@
 <template>
     <AnnouncementBar/>
     <div ref="headerRef" class="header-container">
-        <header class="header">
-            <div class="logo">
-                <a href="/">
-                    <img src="/images/VIỆT HƯNG (1).png" alt="">
-                </a>
-            </div>
-            <nav>
-                <ul class="main-menu">
-                    <li><router-link active-class="active" to="/">Trang chủ</router-link></li>
-                    <li><router-link active-class="active" to="/about">Giới thiệu</router-link></li>
-                    <!-- <li><router-link active-class="active" to="/products">Sản phẩm</router-link></li> -->
-                    <li><router-link active-class="active" to="/contact">Liên hệ</router-link></li>
-                </ul>
-            </nav>
-        </header>
+        <div class="header-wrapper">
+            <header class="header">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/images/logo-square.png" alt="">
+                    </a>
+                </div>
+                <nav>
+                    <ul class="main-menu">
+                        <li><router-link active-class="active" to="/">Trang chủ</router-link></li>
+                        <li><router-link active-class="active" to="/about">Giới thiệu</router-link></li>
+                        <!-- <li><router-link active-class="active" to="/products">Sản phẩm</router-link></li> -->
+                        <li><router-link active-class="active" to="/contact">Liên hệ</router-link></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
     </div>
 </template>
 
@@ -35,10 +37,17 @@ export default {
 
         const handleIntersection = (entries) => {
             entries.forEach(entry => {
+                const imgLogo = headerRef.value.querySelector('.header .logo img');
                 if (entry.boundingClientRect.top < -120) {
                     headerRef.value.classList.add('sticky-menu');
+                    if (imgLogo) {
+                        imgLogo.setAttribute('src', '/images/logo-landscape-removebg.png');
+                    }
                 } else {
                     headerRef.value.classList.remove('sticky-menu');
+                    if (imgLogo) {
+                        imgLogo.setAttribute('src', '/images/logo-square.png');
+                    }
                 }
             });
         };      
@@ -78,6 +87,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    @keyframes header-show-down {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(0%);
+        }
+    }
     @keyframes loadingBar {
         from {
             width: 0%;
@@ -93,15 +110,23 @@ export default {
         position: relative;
 
         &.sticky-menu {
-            header {
+            .header-wrapper {
                 position: fixed;
                 top: 0;
                 left: 0;
                 right: 0;
                 width: 100vw;
-                height: var(--header-height);
+                max-width:unset;
+                height: var(--fixed-header-height);
                 z-index: 1000;
-                background: white;
+                background: rgba(247,245,243,.9) !important;
+                box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+                transition: .5s ease;     
+                animation: 0.5s ease 0s 1 normal both running header-show-down;
+
+                img {
+                    object-fit: contain;
+                }
             }
         }        
 
@@ -120,10 +145,16 @@ export default {
             animation: 20s ease 2s infinite normal both running loadingBar;
         }
 
-        header {
-            margin: 0 auto;
+        .header-wrapper {
+            height: var(--header-height);
             max-width: var(--container-max-width);
+            margin: 0 auto;
+        }
+
+        header {
             height: 100%;
+            max-width: var(--container-max-width);
+            margin: 0 auto;
             display: flex;
             align-items: center;
 

@@ -14,9 +14,9 @@
                     {{ product.name }}
                 </a>
 
-                <span class="price">
+                <!-- <span class="price">
                     {{ formatCurrencyVND(product.price) + " / " + product.unit }}
-                </span>
+                </span> -->
 
                 <a class="contact" href="https://zalo.me/0817790401" target="_blank"
                     >Liên Hệ Mua Hàng</a

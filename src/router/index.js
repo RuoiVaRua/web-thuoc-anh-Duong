@@ -19,6 +19,10 @@ const routes = [
         name: "Contact",
         component: Contact,
     },
+    {
+        path: "/:rest(.*)", // Route bắt tất cả các đường dẫn không xác định
+        redirect: "/"
+    }    
 ];
 
 const router = createRouter({
