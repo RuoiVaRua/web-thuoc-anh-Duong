@@ -1,5 +1,5 @@
 <template>
-<div class="contact-container">
+<div class="about-container">
     <h2>LỊCH SỬ HÌNH THÀNH VÀ PHÁT TRIỂN</h2>
     <hr/>
     <p style="text-align: justify;">Đại Long là đơn vị sản xuất Cơm cháy đầu tiên và lớn nhất tại Ninh Bình. Với tâm huyết của những con người Đại Long, một tập thể đoàn kết, trách nhiệm, sáng tạo, cùng sự khéo léo chỉn chu trong mỗi công đoạn, khắt khe trong quá trình chọn lọc các nguyên vật liệu đầu vào. Trải qua hơn Mười năm xây dựng và phát triển đã được khách hàng tin tưởng, lựa chọn và mệnh danh là “<strong>Vua cơm cháy</strong>” như ngày hôm nay.</p>
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    .contact-container {
+    .about-container {
         max-width: var(--container-max-width);
         margin: 32px auto;
         padding: 0 16px;

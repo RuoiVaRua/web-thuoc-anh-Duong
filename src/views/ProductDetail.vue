@@ -9,13 +9,23 @@
                 <ul>
                     <li v-for="info in product.generalInfor" :key="info">{{ info }}</li>
                 </ul>
-                <button>Liên hệ mua hàng</button>
+                <a
+                    class="contact"
+                    href="https://zalo.me/0817790401"
+                    target="_blank"
+                >
+                    Liên Hệ Mua Hàng
+                </a>
                 <div class="social-media-sharing"></div>
             </div>
         </div>
         <div class="product-description">
-            <h3>Mô Tả Sản Phẩm</h3>
-            <p class="about-viet-hung"></p>
+            <div class="describe"><h3>Mô Tả Sản Phẩm</h3></div>
+            <p class="about-viet-hung">
+                <strong>
+                    Đại Long là đơn vị sản xuất Cơm cháy đầu tiên và lớn nhất tại Ninh Bình. Với tâm huyết của những con người Đại Long, một tập thể đoàn kết, trách nhiệm, sáng tạo, cùng sự khéo léo chỉn chu trong mỗi công đoạn, khắt khe trong quá trình chọn lọc các nguyên vật liệu đầu vào. Trải qua hơn Mười năm xây dựng và phát triển đã được khách hàng tin tưởng, lựa chọn và mệnh danh là “Vua cơm cháy” như ngày hôm nay.
+                </strong>
+            </p>
             <p class="images-and-descriptions">{{ product.description }}</p>
         </div>
         <div class="similar-products"></div>
@@ -37,8 +47,125 @@ export default {
 </script>
 
 <style>
+.product-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    max-width: var(--container-max-width);
+    margin: 60px auto;
+
+    .product-infor {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 30px;
+
+        .main-image {
+            flex: 1;
+        }
+
+        .product-general-infor {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+
+            h1.name {
+                font-size: 1.8rem;
+                line-height: 1.2;
+                font-weight: 700;
+                text-transform: capitalize;
+                text-align: left;
+                color: #2a7d2e;
+            }
+
+            ul {
+                list-style: disc;
+                padding-left: 1rem;
+            }
+
+            a {
+                padding: 10px 30px;
+                border-radius: 30px;
+                font-weight: 500;
+                min-width: 9.14em;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                text-align: center;
+                border: 1px solid #2a7d2e;
+                color: #2a7d2e;
+                margin: 20px 0;
+                display: block;
+                max-width: 200px;   
+                transition: all 0.4s ease;  
+                
+                &:hover {
+                    background-color: #2a7d2e;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .product-description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        .describe {
+            text-align: center;
+            overflow: visible;
+            position: relative;  
+            width: 100%;
+
+            &::before {
+                content: " ";
+                display: table;
+                bottom: 20px !important;
+                position: absolute;
+                content: " ";
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                border-bottom: 1px solid #cfc8d8;
+                z-index: 1;                
+            }
+
+            h3 {
+                width: fit-content;
+                color: #2a7d2e;
+                font-size: 1.71rem;
+                line-height: 1.7;
+                padding: 5px 0;
+                font-weight: 500;
+                position: relative;
+                margin: 0 auto;
+                padding: 0 1em;
+                z-index: 2;
+                background-color: white;
+
+                &::before {
+                    background: #2a7d2e;
+                    color: #2a7d2e;
+                    content: "";
+                    width: calc(100% - 2em);
+                    height: 2px;
+                    position: absolute;
+                    left: 1em;
+                    bottom: 0;
+                    z-index: 11;
+                }
+            }
+        }
+    }
+}
 
 p, li {
     white-space: break-spaces;
+    line-height: 1.7;
 }
 </style>
