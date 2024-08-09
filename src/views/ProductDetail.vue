@@ -26,22 +26,49 @@
                     Đại Long là đơn vị sản xuất Cơm cháy đầu tiên và lớn nhất tại Ninh Bình. Với tâm huyết của những con người Đại Long, một tập thể đoàn kết, trách nhiệm, sáng tạo, cùng sự khéo léo chỉn chu trong mỗi công đoạn, khắt khe trong quá trình chọn lọc các nguyên vật liệu đầu vào. Trải qua hơn Mười năm xây dựng và phát triển đã được khách hàng tin tưởng, lựa chọn và mệnh danh là “Vua cơm cháy” như ngày hôm nay.
                 </strong>
             </p>
-            <p class="images-and-descriptions">{{ product.description }}</p>
+            <div class="images-and-descriptions" ref="imageAndDescription"></div>
         </div>
         <div class="similar-products"></div>
     </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { onUpdated, ref, computed  } from "vue";
+import { useStore } from "vuex"; // Import useStore from vuex
+import { useRoute } from 'vue-router'; // Import useRoute từ vue-router
 
 export default {
     name: "ProductDetail",
-    computed: {
-        ...mapGetters(["getProductById"]),
-        product() {
-            return this.getProductById(this.$route.params.id);
-        }        
+    setup () {
+        const store = useStore(); // Initialize store
+        const route = useRoute(); // Khởi tạo route
+
+        // Lấy id từ route
+        const productId = ref(route.params.id); // Get id from route params
+
+        // Sử dụng computed để lấy product theo id
+        const product = computed(() => store.getters.getProductById(productId.value));
+
+        const imageAndDescription = ref(null);
+
+        onUpdated(() => {
+            if (imageAndDescription.value && product.value?.descriptions?.length) {
+                let imgInd = 0;
+                product.value.descriptions.forEach(value => {
+                    if (value === 'img') {
+                        imageAndDescription.value.innerHTML += `<img alt="" src="${product.value.images[imgInd+1]}" />`;
+                        imgInd++;
+                    } else {
+                        imageAndDescription.value.innerHTML += `<p>${value}</p>`;
+                    }
+                });
+            }
+        });
+
+        return {
+            product,
+            imageAndDescription
+        };
     }
 };
 </script>
@@ -159,6 +186,22 @@ export default {
                     bottom: 0;
                     z-index: 11;
                 }
+            }
+        }
+
+        .images-and-descriptions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;      
+            
+            img {
+                max-height: 400px;
+                object-fit: contain;
+            }
+
+            p {
+                width: 100%;
             }
         }
     }
