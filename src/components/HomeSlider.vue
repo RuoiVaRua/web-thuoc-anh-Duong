@@ -13,10 +13,10 @@
             </div>
         </div>
         <button class="nav prev" @click="prevSlide">
-            <font-awesome-icon :icon="['fas', 'angle-left']" />
+            <i class="fa-solid fa-angle-left"></i>
         </button>
         <button class="nav next" @click="nextSlide">
-            <font-awesome-icon :icon="['fas', 'angle-right']" />
+            <i class="fa-solid fa-angle-right"></i>
         </button>
         <div class="pagination">
             <button

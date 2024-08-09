@@ -31,7 +31,7 @@
             <div class="bottom-section">
                 <div class="mail">
                     <div class="icon">
-                        <font-awesome-icon :icon="['fas', 'envelope']" />
+                        <i class="fa-solid fa-envelope"></i>
                     </div>
                     <div class="detail">
                         <a href="mailto:dailongjsc.vn@gmail.com">dailongjsc.vn@gmail.com</a>
@@ -40,7 +40,7 @@
                 </div>
                 <div class="phone">
                     <div class="icon">
-                        <font-awesome-icon :icon="['fas', 'phone']" />
+                        <i class="fa-solid fa-phone"></i>
                     </div>
                     <div class="detail">
                         <a href="tel:0972086234">0972086234</a>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="address">
                     <div class="icon">
-                        <font-awesome-icon :icon="['fas', 'location-dot']" />
+                        <i class="fa-solid fa-location-dot"></i>
                     </div>
                     <div class="detail">
                         <router-link to="/contact">Thường Kiệt - Yên Mỹ - Hưng Yên</router-link>

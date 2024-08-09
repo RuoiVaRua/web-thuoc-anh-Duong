@@ -193,7 +193,7 @@ export default {
                         a {
                             height: 60px;
                             display: block;
-                            padding: 20px 0;
+                            padding: 15px 0 20px;
                             font-weight: 700;
                             text-transform: uppercase; 
 
@@ -223,7 +223,7 @@ export default {
                                     content: '';
                                     position: absolute;
                                     left: 0;
-                                    top: 45px;
+                                    top: 40px;
                                     display: block;
                                     background: #007338;
                                     transition: width 0.4s ease;

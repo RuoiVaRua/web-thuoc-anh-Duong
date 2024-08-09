@@ -9,31 +9,31 @@
 
                 <div class="address">
                     <div class="sub-title">
-                        <font-awesome-icon :icon="['fas', 'map-location-dot']" />
+                        <i class="fa-solid fa-location-dot"></i>
                         <span>Địa chỉ</span>
                     </div>
                     <span>xã Lý Thường Kiệt - huyện Yên Mỹ - tỉnh Hưng Yên</span>
                 </div>
                 <div class="phone">
                     <div class="sub-title">
-                        <font-awesome-icon :icon="['fas', 'phone']" />
+                        <i class="fa-solid fa-phone"></i>
                         <span>Điện thoại</span>
                     </div>
                     <span>0972086234</span>
                 </div>
                 <div class="email">
                     <div class="sub-title">
-                        <font-awesome-icon :icon="['fas', 'envelope']" />
+                        <i class="fa-solid fa-envelope"></i>
                         <span>Email</span>
                     </div>
                     <span>dailongjsc.vn@gmail.com</span>
                 </div>
                 <div class="social-media">
                     <div class="social-list">
-                        <font-awesome-icon :icon="['fab', 'facebook-f']" size="lg" />
-                        <font-awesome-icon :icon="['fab', 'x-twitter']" size="lg" />
-                        <font-awesome-icon :icon="['fab', 'youtube']" size="lg" />
-                        <font-awesome-icon :icon="['fab', 'google-plus-g']" size="lg" />
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-google-plus-g"></i>
                     </div>
                 </div>
             </div>

@@ -6,17 +6,17 @@
             </div>
             <div class="right-section">
                 <aside>
-                    <a href="tel:0972086234"><font-awesome-icon :icon="['fas', 'phone-volume']" /> 0972086234</a>
-                    <a href="mailto:dailongjsc.vn@gmail.com"><font-awesome-icon :icon="['fas', 'envelope']" /> dailongjsc.vn@gmail.com</a>
+                    <a href="tel:0972086234"><i class="fa-solid fa-phone-volume"></i> 0972086234</a>
+                    <a href="mailto:dailongjsc.vn@gmail.com"><i class="fa-solid fa-envelope"></i> dailongjsc.vn@gmail.com</a>
                 </aside>
                 <aside>
                     <ul>
                         <li><img :src="zaloImg" alt="Zalo" width="20" height="20"/></li>
-                        <li><font-awesome-icon :icon="['fab', 'facebook']" /></li>
-                        <li><font-awesome-icon :icon="['fab', 'instagram']" /></li>
-                        <li><font-awesome-icon :icon="['fab', 'square-x-twitter']" /></li>
-                        <li><font-awesome-icon :icon="['fab', 'square-youtube']" /></li>
-                        <li><font-awesome-icon :icon="['fab', 'square-whatsapp']" /></li>
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                        <li><i class="fa-brands fa-square-x-twitter"></i></li>
+                        <li><i class="fa-brands fa-square-youtube"></i></li>
+                        <li><i class="fa-brands fa-square-whatsapp"></i></li>
                     </ul>
                 </aside>
             </div>
