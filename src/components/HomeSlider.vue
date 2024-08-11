@@ -89,7 +89,7 @@ export default {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: #ed1c24;
+    color: var(--main-red);
     border: none;
     cursor: pointer;
     z-index: 10;

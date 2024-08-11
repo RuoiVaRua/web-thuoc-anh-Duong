@@ -35,8 +35,8 @@ export default {
 
         hr {
             height: 0;
-            background-color: #0693e3;
-            color: #0693e3;
+            background-color: var(--main-blue);
+            color: var(--main-blue);
             border: none;
             border-top: 2px solid;
             margin-top: 20px;

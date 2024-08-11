@@ -39,7 +39,7 @@ export default {
 
 <style lang="scss" scoped>
     .announcement-bar-container {
-        background: #252628;
+        background: var(--main-dark);
         color: #fff;
         height: var(--announcement-bar-height);
 
@@ -70,7 +70,7 @@ export default {
             }               
 
             &::before {
-                background: #007338;
+                background: var(--main-green);
                 content: '';
                 position: absolute;
                 top: 0;
@@ -117,7 +117,7 @@ export default {
                 }                
 
                 &::before, &::after {
-                    background: #007338;
+                    background: var(--main-green);
                     width: calc(100% + 15px);
                     left: -15px;
                     content: '';

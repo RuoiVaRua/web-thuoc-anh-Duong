@@ -71,7 +71,7 @@ export default {
         flex-direction: column;
         align-items: center;
         width: calc((100% - (30px * 2)) / 3);
-        background-color: #eee;
+        background-color: var(--second-grey);
 
         @media only screen and (max-width: 767px) {
             width: calc((100% - (30px * 2)) / 2);
@@ -109,7 +109,7 @@ export default {
                 text-transform: capitalize;
                 font-size: 1.2rem;
                 outline: 0;
-                color: #1d5720;
+                color: var(--third-green);
                 font-weight: 400;
 
                 @media only screen and (max-width: 450px) {
@@ -137,8 +137,8 @@ export default {
                 white-space: nowrap;
                 overflow: hidden;
                 text-align: center;
-                border: 1px solid #2a7d2e;
-                color: #2a7d2e;
+                border: 1px solid var(--second-green);
+                color: var(--second-green);
                 transition: all ease 0.4s;
 
                 @media only screen and (max-width: 767px) {
@@ -154,7 +154,7 @@ export default {
                 }
 
                 &:hover {
-                    background: #2a7d2e;
+                    background: var(--second-green);
                     color: #fff;
                     transition: all ease 0.4s;
                 }

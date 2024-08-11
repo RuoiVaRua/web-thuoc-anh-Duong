@@ -267,13 +267,13 @@ export default {
                                 // left: 0;
                                 // top: 45px;
                                 // display: block;
-                                // background: #007338;
+                                // background: var(--main-green);
                                 transition: width 0.4s ease;
                             }
 
                             &.active.router-link-exact-active,
                             &:hover {
-                                color: #007338;
+                                color: var(--main-green);
                                 position: relative;
 
                                 &::before {
@@ -284,7 +284,7 @@ export default {
                                     left: 0;
                                     top: 40px;
                                     display: block;
-                                    background: #007338;
+                                    background: var(--main-green);
                                     transition: width 0.4s ease;
                                 }
                             }

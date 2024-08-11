@@ -161,7 +161,7 @@ export default {
             gap: 12px;
             padding: 20px 0;
             width: 100%;
-            border-bottom: 1px solid #e1e1e1;
+            border-bottom: 1px solid var(--border-color);
 
             @media only screen and (max-width: 767px) {
                 gap: 6px;
@@ -240,7 +240,7 @@ export default {
                 input, textarea {
                     width: 100%;
                     font-size: 14px;
-                    border: 1px solid #e1e1e1;
+                    border: 1px solid var(--border-color);
                     background: #fff;
                     height: 40px;
                     padding: 5px;
@@ -272,7 +272,7 @@ export default {
                 font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
                 font-size: 1rem;
                 border-radius: 2.14em;
-                border: 1px solid #e1e1e1;
+                border: 1px solid var(--border-color);
                 background: 0 0;
                 font-weight: 500;
                 padding: 0 1.5em;
@@ -287,13 +287,13 @@ export default {
                 -o-transition: all .3s ease;
                 width: 200px;
                 border-radius: 0;
-                background: #2a7d2e;
+                background: var(--second-green);
                 color: #fff;
                 text-transform: uppercase;        
                 
                 &:hover {
-                    background: #2a7d2e;
-                    border-color: #2a7d2e;
+                    background: var(--second-green);
+                    border-color: var(--second-green);
                     text-shadow: none;
                     color: #fff;
                 }

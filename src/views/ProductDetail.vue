@@ -132,7 +132,7 @@ export default {
                 font-weight: 700;
                 text-transform: capitalize;
                 text-align: left;
-                color: #2a7d2e;
+                color: var(--second-green);
             }
 
             ul {
@@ -149,8 +149,8 @@ export default {
                 white-space: nowrap;
                 overflow: hidden;
                 text-align: center;
-                border: 1px solid #2a7d2e;
-                color: #2a7d2e;
+                border: 1px solid var(--second-green);
+                color: var(--second-green);
                 margin: 20px 0;
                 display: block;
                 max-width: 200px;   
@@ -161,7 +161,7 @@ export default {
                 }                        
                 
                 &:hover {
-                    background-color: #2a7d2e;
+                    background-color: var(--second-green);
                     color: #fff;
                 }
             }
@@ -189,13 +189,13 @@ export default {
                 width: 100%;
                 bottom: 0;
                 left: 0;
-                border-bottom: 1px solid #cfc8d8;
+                border-bottom: 1px solid var(--third-grey);
                 z-index: 1;                
             }
 
             h3 {
                 width: fit-content;
-                color: #2a7d2e;
+                color: var(--second-green);
                 font-size: 1.71rem;
                 line-height: 1.7;
                 padding: 5px 0;
@@ -207,8 +207,8 @@ export default {
                 background-color: white;
 
                 &::before {
-                    background: #2a7d2e;
-                    color: #2a7d2e;
+                    background: var(--second-green);
+                    color: var(--second-green);
                     content: "";
                     width: calc(100% - 2em);
                     height: 2px;

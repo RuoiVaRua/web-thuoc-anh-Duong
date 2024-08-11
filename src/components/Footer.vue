@@ -91,8 +91,8 @@ export default {
 
 <style lang="scss" scoped>
 .footer-container {
-    background-color: #252628;
-    color: #bbb;
+    background-color: var(--main-dark);
+    color: var(--main-grey);
 
     .footer {
         max-width: var(--container-max-width);
@@ -166,18 +166,18 @@ export default {
                             line-height: 1.7;
 
                             &:not(:last-child) {
-                                border-right: 1px solid #bbb;
+                                border-right: 1px solid var(--main-grey);
                             }
                         }                        
 
                         &:hover {
-                            color: #2a7d2e;
+                            color: var(--second-green);
                             padding-left: 10px;
                             transition: all ease 0.4s;
                         }
 
                         a {
-                            color: #bbb;
+                            color: var(--main-grey);
 
                             @media only screen and (max-width: 991px) {
                                 padding: 0 10px;
@@ -289,7 +289,7 @@ export default {
             }
 
             .phone {
-                background-color: #007338;
+                background-color: var(--main-green);
             }
         }
     }

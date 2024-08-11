@@ -55,7 +55,7 @@ export default {
                 top: 50%;
                 left: 0;
                 transform: translateY(-50%);
-                background: linear-gradient(to right,rgba(255,255,255,.14) 0%,#007338 50%,#007338 53%,rgba(255,255,255,0) 100%);
+                background: linear-gradient(to right,rgba(255,255,255,.14) 0%,var(--main-green) 50%,var(--main-green) 53%,rgba(255,255,255,0) 100%);
                 background-size: auto;
                 width: 100%;
                 height: 2.5px;
@@ -67,7 +67,7 @@ export default {
                 display: inline-block;
                 padding: 0 20px !important;
                 background-color: #fff;
-                color: #007338;
+                color: var(--main-green);
                 margin: 0 !important;
                 font-size: 2rem;
                 text-transform: capitalize;
@@ -92,7 +92,7 @@ export default {
 
         button.show-more {
             color: #fff;
-            background-color: #6dab3c;
+            background-color: var(--fourth-green);
             font-size: 14px;
             padding: 14px 20px;
             border-radius: 5px;
@@ -104,8 +104,8 @@ export default {
             }            
 
             &:hover {
-                color: #f7f7f7;
-                background-color: #5f9434;
+                color: var(--main-white);
+                background-color: var(--fifth-green);
             }
         }
     }
