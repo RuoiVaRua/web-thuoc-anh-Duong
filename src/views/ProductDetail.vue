@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import { onUpdated, ref, computed  } from "vue";
+import { onMounted, ref, computed, watch, nextTick } from "vue";
 import { useStore } from "vuex"; // Import useStore from vuex
 import { useRoute } from 'vue-router'; // Import useRoute từ vue-router
 
@@ -51,7 +51,8 @@ export default {
 
         const imageAndDescription = ref(null);
 
-        onUpdated(() => {
+        const updateImageAndDescription = () => {    
+            nextTick(() => {  
             if (imageAndDescription.value && product.value?.descriptions?.length) {
                 let imgInd = 0;
                 product.value.descriptions.forEach(value => {
@@ -63,7 +64,14 @@ export default {
                     }
                 });
             }
-        });
+        })
+        }
+
+        // Optionally, use onMounted to initialize the rendering when component is mounted
+        onMounted(updateImageAndDescription);
+
+        // Use watch to monitor changes to the product
+        watch(product, updateImageAndDescription);
 
         return {
             product,
@@ -73,7 +81,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .product-detail-container {
     display: flex;
     flex-direction: column;
@@ -82,11 +90,24 @@ export default {
     max-width: var(--container-max-width);
     margin: 60px auto;
 
+    @media only screen and (max-width: 991px) {
+        gap: 0;
+    }            
+
+    @media only screen and (max-width: 500px) {
+        margin: 20px auto;
+    }            
+
     .product-infor {
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        gap: 30px;
+        gap: var(--gap-30);
+
+        @media only screen and (max-width: 991px) {
+            flex-direction: column;
+            align-items: center;
+        }        
 
         .main-image {
             flex: 1;
@@ -97,7 +118,13 @@ export default {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 20px;
+            gap: var(--gap-20);
+
+            @media only screen and (max-width: 991px) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }                    
 
             h1.name {
                 font-size: 1.8rem;
@@ -128,6 +155,10 @@ export default {
                 display: block;
                 max-width: 200px;   
                 transition: all 0.4s ease;  
+
+                @media only screen and (max-width: 500px) {
+                    margin: 0;
+                }                        
                 
                 &:hover {
                     background-color: #2a7d2e;
@@ -141,7 +172,7 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 30px;
+        gap: var(--gap-30);
 
         .describe {
             text-align: center;
@@ -193,9 +224,9 @@ export default {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 30px;      
+            gap: var(--gap-30);      
             
-            img {
+            & > img {
                 max-height: 400px;
                 object-fit: contain;
             }
@@ -210,5 +241,9 @@ export default {
 p, li {
     white-space: break-spaces;
     line-height: 1.7;
+
+    @media only screen and (max-width: 450px) {
+        line-height: 1.5;
+    }    
 }
 </style>

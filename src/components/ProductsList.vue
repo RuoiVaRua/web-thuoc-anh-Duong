@@ -10,9 +10,12 @@
             </a>
 
             <div class="name-price-contact">
-                <a class="name" :href="'/product/' + product.id">
+                <router-link class="name" :to="'/product/' + product.id">
                     {{ product.name }}
-                </a>
+                </router-link>
+                <!-- <a class="name" :href="'/product/' + product.id">
+                    {{ product.name }}
+                </a> -->
 
                 <!-- <span class="price">
                     {{ formatCurrencyVND(product.price) + " / " + product.unit }}
@@ -54,9 +57,14 @@ export default {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: var(--gap-30);
     max-width: var(--container-max-width);
     margin: 30px auto;
+
+    @media only screen and (max-width: 767px) {
+        gap: var(--gap-20);
+    }         
 
     .product-image {
         display: flex;
@@ -65,27 +73,48 @@ export default {
         width: calc((100% - (30px * 2)) / 3);
         background-color: #eee;
 
+        @media only screen and (max-width: 767px) {
+            width: calc((100% - (30px * 2)) / 2);
+        }         
+
+        @media only screen and (max-width: 450px) {
+            width: 90%;
+        }         
+
         img {
             object-fit: cover;
             width: 100%;
-            height: 370px;
+            height: var(--product-image-height);
+
+            @media only screen and (max-width: 450px) {
+                height: unset;
+            }                     
         }
 
         .name-price-contact {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px;
-            padding: 15px 0;
+            gap: var(--gap-15);
+            padding: 15px 15px;
             width: 100%;
+
+            @media only screen and (max-width: 450px) {
+                padding: 15px 0;
+            }
 
             .name {
                 display: block;
+                text-align: center;
                 text-transform: capitalize;
                 font-size: 1.2rem;
                 outline: 0;
                 color: #1d5720;
                 font-weight: 400;
+
+                @media only screen and (max-width: 450px) {
+                    font-size: 1rem;
+                }                
 
                 &:hover {
                     text-decoration: underline;
@@ -111,6 +140,18 @@ export default {
                 border: 1px solid #2a7d2e;
                 color: #2a7d2e;
                 transition: all ease 0.4s;
+
+                @media only screen and (max-width: 767px) {
+                    min-width: unset;
+                    height: unset;
+                    padding: 8px 12px;
+                    max-width: 80%;
+                    text-overflow: ellipsis;                    
+                } 
+                
+                @media only screen and (max-width: 300px) {
+                    font-size: 14px;
+                }
 
                 &:hover {
                     background: #2a7d2e;

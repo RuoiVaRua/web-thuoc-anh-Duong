@@ -4,9 +4,9 @@
         <div class="header-wrapper">
             <header class="header">
                 <div class="logo">
-                    <a href="/">
+                    <router-link to="/">
                         <img src="/images/logo-square.png" alt="">
-                    </a>
+                    </router-link>
                 </div>
                 <nav>
                     <ul class="main-menu">
@@ -24,7 +24,7 @@
 <script>
 import AnnouncementBar from './AnnouncementBar.vue';
 import { ref, onMounted, onBeforeUnmount } from 'vue';
-import debounce from '../utils/debounce';
+// import debounce from '../utils/debounce';
 
 export default {
     components: {
@@ -38,7 +38,13 @@ export default {
         const handleIntersection = (entries) => {
             entries.forEach(entry => {
                 const imgLogo = headerRef.value.querySelector('.header .logo img');
-                if (entry.boundingClientRect.top < -120) {
+                if (
+                    (window.innerWidth > 575 &&
+                    entry.boundingClientRect.top < -120)
+                    ||
+                    (window.innerWidth <= 575 &&
+                    entry.boundingClientRect.top < -180)
+                ) {
                     headerRef.value.classList.add('sticky-menu');
                     if (imgLogo) {
                         imgLogo.setAttribute('src', '/images/logo-landscape-removebg.png');
@@ -126,6 +132,10 @@ export default {
 
                 img {
                     object-fit: contain;
+
+                    @media only screen and (max-width: 575px) {
+                        display: none;
+                    }
                 }
             }
         }        
@@ -149,6 +159,10 @@ export default {
             height: var(--header-height);
             max-width: var(--container-max-width);
             margin: 0 auto;
+
+            @media only screen and (max-width: 767px) {
+                max-width: 100%;
+            }            
         }
 
         header {
@@ -158,9 +172,38 @@ export default {
             display: flex;
             align-items: center;
 
+            @media only screen and (max-width: 767px) {
+                max-width: 100%;
+            }
+
+            @media only screen and (max-width: 575px) {
+                flex-direction: column;
+            }                
+
             .logo {
                 flex: 1;
                 height: 100%;
+
+                @media only screen and (max-width: 575px) {
+                    height: 90px;
+                    width: 55%;
+
+                    & img {
+                        object-position: center;
+                    }
+                }      
+                
+                @mixin responsive-width($max-width, $width) {
+                    @media only screen and (max-width: $max-width) {
+                        width: $width;
+                    }
+                }                
+
+                @include responsive-width(500px, 60%);
+                @include responsive-width(450px, 65%);
+                @include responsive-width(400px, 70%);
+                @include responsive-width(350px, 80%);
+                @include responsive-width(300px, 100%);                
 
                 a {
                     display: block;
@@ -180,10 +223,23 @@ export default {
             nav {
                 flex: 1;
 
+                @media only screen and (max-width: 575px) {
+                    // flex: 2;
+                    height: 60px;
+                }                 
+
                 .main-menu {
                     display: flex;
                     align-items: center;
-                    gap: 30px;
+                    gap: var(--gap-30);
+
+                    @media only screen and (max-width: 650px) {
+                        gap: var(--gap-20);
+                    }                       
+
+                    @media only screen and (max-width: 300px) {
+                        gap: 10px;
+                    }                    
 
                     li {
                         & * {
@@ -196,9 +252,12 @@ export default {
                             padding: 15px 0 20px;
                             font-weight: 700;
                             text-transform: uppercase; 
-
                             color: black;
                             position: unset;
+
+                            @media only screen and (max-width: 300px) {
+                                font-size: 14px;
+                            }         
 
                             &::before {
                                 width: 0px;

@@ -6,7 +6,7 @@
             <h3 class="title">Giới Thiệu Chung</h3>
         </div>
         <div class="description">Đại Long là đơn vị sản xuất Cơm cháy đầu tiên và lớn nhất tại Ninh Bình. Với tâm huyết của những con người Đại Long, một tập thể đoàn kết, trách nhiệm, sáng tạo, cùng sự khéo léo chỉn chu trong mỗi công đoạn, khắt khe trong quá trình chọn lọc các nguyên vật liệu đầu vào. Trải qua hơn Mười năm xây dựng và phát triển đã được khách hàng tin tưởng, lựa chọn và mệnh danh là “Vua cơm cháy” như ngày hôm nay.</div>
-        <router-link active-class="active" to="/about">
+        <router-link to="/about">
             <button class="show-more">
                 Xem Thêm
             </button>
@@ -31,10 +31,18 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: var(--gap-20);
         max-width: var(--container-max-width);
         margin: 30px auto;
 
+        @media only screen and (max-width: 400px) {
+            flex-direction: column;
+            margin: 15px auto;
+        }                    
+
+        @media only screen and (max-width: 300px) {
+            display: none;
+        }                    
 
         .title-container {
             position: relative;
@@ -71,19 +79,29 @@ export default {
         .description {
             font-weight: 700;
             line-height: 28px;
+            max-height: 280px;
+
+            @media only screen and (max-width: 575px) {
+                padding: 0 10px;
+            }             
+            
+            @media only screen and (max-width: 350px) {
+                line-height: 24px;
+            }             
         }
 
         button.show-more {
             color: #fff;
             background-color: #6dab3c;
             font-size: 14px;
-            padding-top: 14px;
-            padding-bottom: 14px;
-            padding-left: 20px;
-            padding-right: 20px;
+            padding: 14px 20px;
             border-radius: 5px;
             border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.1);
             transition: background-color ease 0.4s;
+
+            @media only screen and (max-width: 400px) {
+                padding: 7px 10px;
+            }            
 
             &:hover {
                 color: #f7f7f7;

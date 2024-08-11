@@ -41,6 +41,7 @@ export default {
     .announcement-bar-container {
         background: #252628;
         color: #fff;
+        height: var(--announcement-bar-height);
 
         li {
             display: inline-block;
@@ -53,7 +54,20 @@ export default {
             padding-left: 15px;
             position: relative;
             margin: 0 auto;
-            max-width: 1200px;  
+            max-width: var(--container-max-width);  
+            height: 100%;
+
+            @media only screen and (max-width: 991px) {
+                max-width: 100%;
+            }            
+
+            @media only screen and (max-width: 950px) {
+                padding: 0
+            }            
+
+            @media only screen and (max-width: 400px) {
+                justify-content: center;
+            }               
 
             &::before {
                 background: #007338;
@@ -64,7 +78,11 @@ export default {
                 display: block;
                 z-index: 0;
                 height: 100%;
-                width: 100%;                
+                width: 100%;   
+                
+                @media only screen and (max-width: 400px) {
+                    display: none;
+                }                    
             }
             
             & > div {
@@ -73,6 +91,10 @@ export default {
                 padding: 11px 15px;
                 float: left;
                 z-index: 1;
+
+                @media only screen and (max-width: 870px) {
+                    padding: 11px 0px;
+                }                
             }
             
             .left-section {
@@ -80,7 +102,19 @@ export default {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                height: var(--announcement-bar-height);
+                height: 100%;
+
+                @media only screen and (max-width: 575px) {
+                    width: 45%;
+                }               
+                
+                // @media only screen and (max-width: 475px) {
+                //     width: 40%;
+                // }                
+                
+                @media only screen and (max-width: 360px) {
+                    display: none;
+                }                
 
                 &::before, &::after {
                     background: #007338;
@@ -103,24 +137,74 @@ export default {
                 }
 
                 span {
+                    text-align: center;
                     text-transform: uppercase;
                     font-weight: 700;
+
+                    @media only screen and (max-width: 950px) {
+                        font-size: 14px;
+                    }                   
+                    
+                    @media only screen and (max-width: 767px) {
+                        font-size: 12px;
+                    }
                 }
             }
         
             .right-section {
                 width: 66.66666667%;
                 text-align: right;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;    
+                
+                @media only screen and (max-width: 575px) {
+                    width: 55%;
+                }
+                
+                // @media only screen and (max-width: 475px) {
+                //     width: 60%;
+                // }
+                    
+                @media only screen and (max-width: 300px) {
+                    justify-content: center;
+                }
 
                 aside {
                     clear: both;
                     word-wrap: break-word;
                     display: inline-block;
+
+                    @media only screen and (min-width: 360px) and (max-width: 450px) {
+                        svg {
+                            display: none;
+                        }                    
+                    }
                 }
 
                 aside:first-child {
                     margin-right: 30px;
                     position: relative;
+                    display: flex;
+                    align-items: center;
+
+                    @media only screen and (max-width: 1199px) and (min-width: 871px) {
+                        // display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }                    
+
+                    @media only screen and (max-width: 575px) {
+                        // display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        
+                    }                    
+
+                    @media only screen and (max-width: 475px) {
+                        margin-right: 10px;
+                    }
 
                     &::after {
                         background: #fff;
@@ -134,9 +218,15 @@ export default {
                         display: block;
                         z-index: 1;
                         opacity: .6;
+
+                        @media only screen and (max-width: 870px) {
+                            content: none;
+                        }                         
                     }
 
                     a {
+                        display: flex;
+                        align-items: center;
                         color: white;
 
                         &:first-child {
@@ -152,7 +242,18 @@ export default {
                 aside:last-child {
                     padding-left: 15px;
 
+                    @media only screen and (max-width: 870px) {
+                        display: none;
+                    }                    
+
+                    ul {
+                        display: flex;
+                        align-items: center;
+                    }
+
                     li {
+                        display: flex;
+                        align-items: center;
                         vertical-align: middle;
                         margin: 5px 10px;
                         svg {

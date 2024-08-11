@@ -60,11 +60,15 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .slider {
     position: relative;
     width: 100%;
     overflow: hidden;
+
+    @media only screen and (max-width: 400px) {
+        display: none;
+    }    
 }
 
 .slider-wrapper {

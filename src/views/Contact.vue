@@ -45,34 +45,73 @@
                     <br>Chúng tôi luôn sẵn lòng lắng nghe và hỗ trợ bạn.
                 </p>
 
-                <form action="">
+                <div class="form">
                     <div class="form-input">
                         <label for="name">Họ và Tên</label>
-                        <input type="text" id="name">
+                        <input type="text" id="name" required>
                     </div>
                     <div class="form-input">
                         <label for="email">Email</label>
-                        <input type="email" id="email">
+                        <input type="email" id="email" required>
                     </div>
                     <div class="form-input">
-                        <label for="header">Tiêu đề</label>
-                        <input type="text" id="header">
+                        <label for="title">Tiêu đề</label>
+                        <input type="text" id="title">
                     </div>
                     <div class="form-input">
-                        <label for="content">Nội dung</label>
-                        <textarea id="content" cols="30" rows="10"></textarea>
+                        <label for="message">Nội dung</label>
+                        <textarea id="message" cols="30" rows="10" required></textarea>
                     </div>
 
-                    <button type="submit">Gửi đi</button>
-                </form>
+                    <button type="submit" @click="sendMail()">Gửi đi</button>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import emailjs from '@emailjs/browser';
+
 export default {
     name: "Contact",
+    methods: {
+        sendMail () {
+            if (emailjs) {
+                const publicKey = import.meta.env.VITE_PUBLIC_KEY_EMAILJS;
+                const serviceID = import.meta.env.VITE_SERVICE_ID_EMAILJS;
+                const templateReceiveID = import.meta.env.VITE_TEMPLATE_RECEIVE_ID_EMAILJS;
+                // const templateReplyID = import.meta.env.VITE_TEMPLATE_REPLY_ID_EMAILJS;
+
+                emailjs.init({
+                    publicKey, // my public emailjs key
+                });
+
+                const params = {
+                    from_name: document.getElementById("name").value,
+                    to_name: document.getElementById("name").value,
+                    email_id: document.getElementById("email").value,
+                    title: document.getElementById("title").value,
+                    message: document.getElementById("message").value,
+                }
+
+                emailjs.send(serviceID, templateReceiveID, params)
+                    .then(response => {
+                        if (response.status === 200) {
+                            alert("Chân thành cảm ơn bạn đã góp ý cho chúng tôi.\nChúng tôi sẽ phản hồi trong thời gian sớm nhất");
+
+                            // const paramsResponse = {
+                            //     from_name: "Việt Hưng",
+                            //     to_name: document.getElementById("name").value,
+                            //     email_id: document.getElementById("email").value,
+                            // };
+
+                            // emailjs.send(serviceID, templateReplyID, paramsResponse);                            
+                        }
+                    })
+            }
+        }
+    }
 };
 </script>
 
@@ -89,6 +128,12 @@ export default {
     gap: 50px;
     margin: 50px auto;
 
+    @media only screen and (max-width: 767px) {
+        flex-direction: column;
+        gap: 20px;
+        margin: 25px auto;
+    }    
+
     .contact-us {
         flex: 1;
         display: flex;
@@ -98,6 +143,15 @@ export default {
         .title {
             text-transform: capitalize;
             margin: 0 0 2.14em;
+
+            @media only screen and (max-width: 767px) {
+                margin: 0 0 0.5em;
+            }  
+            
+            @media only screen and (max-width: 500px) {
+                margin: 0;
+                font-size: 1.5rem;
+            }            
         }
 
         .address, .phone, .email, .social-media {
@@ -108,6 +162,11 @@ export default {
             padding: 20px 0;
             width: 100%;
             border-bottom: 1px solid #e1e1e1;
+
+            @media only screen and (max-width: 767px) {
+                gap: 6px;
+                padding: 10px 0;
+            }            
 
             &.social-media {
                 border-bottom: unset;
@@ -142,14 +201,29 @@ export default {
         .title {
             text-transform: capitalize;
             margin: 0 0 2.14em;
+
+            @media only screen and (max-width: 767px) {
+                margin: 0 0 0.5em;
+            }               
+
+            @media only screen and (max-width: 500px) {
+                margin: 0;
+                font-size: 1.5rem;
+            }               
         }        
 
         .description {
             margin-bottom: 16px;
             padding: 20px 0;
+
+            @media only screen and (max-width: 767px) {
+                margin-bottom: 8px;
+                padding: 10px 0;
+                line-height: 1.2;
+            }               
         }
 
-        form {
+        .form {
             width: 100%;
             display: flex;
             flex-direction: column;

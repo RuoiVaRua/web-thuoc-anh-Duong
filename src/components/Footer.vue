@@ -16,11 +16,31 @@
                     <h3 class="title">Sản phẩm</h3>
                     <div class="content">
                         <ul>
-                            <li>Bồ Công Anh</li>
-                            <li>Hạt Sen</li>
-                            <li>Lá Sen</li>
-                            <li>Tam Thất Bắc</li>
-                            <li>Xạ Đen</li>
+                            <li>
+                                <router-link class="name" :to="'/product/bo-cong-anh'">
+                                    Bồ Công Anh
+                                </router-link>                                
+                            </li>
+                            <li>
+                                <router-link class="name" :to="'/product/la-sen'">
+                                    Lá Sen
+                                </router-link>                                
+                            </li>
+                            <li>
+                                <router-link class="name" :to="'/product/tam-that-bac'">
+                                    Tam Thất Bắc
+                                </router-link>                                
+                            </li>
+                            <li>
+                                <router-link class="name" :to="'/product/xa-den'">
+                                    Xạ Đen
+                                </router-link>                                
+                            </li>
+                            <li>
+                                <router-link class="name" :to="'/product/hat-sen'">
+                                    Hạt Sen
+                                </router-link>                                
+                            </li>
                         </ul>                      
                     </div>
                 </div>
@@ -66,7 +86,6 @@
 
 export default {
     name: "Footer"
-    
 };
 </script>
 
@@ -84,11 +103,19 @@ export default {
         gap: 1.42em;
         padding: 5.7rem 0 1.42rem;
 
+        @media only screen and (max-width: 991px) {
+            padding-top: 1.42rem;
+        }                    
+
         .top-section {
             display: flex;
             align-items: flex-start;
-            gap: 30px;
+            gap: var(--gap-30);
             width: 100%;
+
+            @media only screen and (max-width: 991px) {
+                flex-direction: column;
+            }            
 
             & > div {
                 display: flex;
@@ -96,6 +123,12 @@ export default {
                 align-items: flex-start;
                 gap: 2.14rem;
                 margin-bottom: 2.85rem;
+
+                @media only screen and (max-width: 991px) {
+                    margin-bottom: 0;
+                    gap: unset;
+                } 
+
                 h3.title {
                     text-transform: capitalize;
                     color: #fff;
@@ -107,18 +140,35 @@ export default {
                 .content {
                     p {
                         margin-bottom: 10px;
+
+                        @media only screen and (max-width: 991px) {
+                            margin-bottom: 0;
+                        }                         
                     }
 
                     ul {
                         display: flex;
                         flex-direction: column;
                         align-items: flex-start;
+
+                        @media only screen and (max-width: 991px) {
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                        }
                     }
                     li {
                         line-height: 30px;
                         padding-left: 0;
                         transition: all ease 0.4s;
                         cursor: pointer;
+
+                        @media only screen and (max-width: 991px) {
+                            line-height: 1.7;
+
+                            &:not(:last-child) {
+                                border-right: 1px solid #bbb;
+                            }
+                        }                        
 
                         &:hover {
                             color: #2a7d2e;
@@ -128,6 +178,10 @@ export default {
 
                         a {
                             color: #bbb;
+
+                            @media only screen and (max-width: 991px) {
+                                padding: 0 10px;
+                            }                         
                         }
                     }
                 }
@@ -144,6 +198,20 @@ export default {
             .facebook {
                 flex: 5;
             }
+
+            @media only screen and (max-width: 1199px) {
+                .company-information {
+                    flex: 6;
+                }
+
+                .products {
+                    flex: 2;
+                }
+
+                .facebook {
+                    flex: 4;
+                }
+            }            
         }
 
         .bottom-section {
@@ -151,13 +219,27 @@ export default {
             align-items: center;
             width: 100%;
 
+            @media only screen and (max-width: 992px) {
+                flex-wrap: wrap;
+            }            
+
             & > div {
                 flex: 1;
                 display: flex;
                 align-items: center;
-                gap: 15px;
+                gap: var(--gap-15);
                 padding: 15px;
                 background: #000;
+
+                @media only screen and (max-width: 300px) {
+                    padding: 5px;
+                }
+
+                // &:last-child .icon {
+                //     @media only screen and (max-width: 450px) {
+                //         display: none;
+                //     }
+                // }
 
                 .icon {
                     width: 48px;
@@ -169,6 +251,10 @@ export default {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+
+                    @media only screen and (max-width: 450px) {
+                        display: none;
+                    }                    
                 }
 
                 .detail {
@@ -180,6 +266,15 @@ export default {
                         color: #fff !important;
                         font-weight: 700;
                         font-size: 1.2rem;
+                        white-space: nowrap;
+
+                        @media only screen and (max-width: 450px) {
+                            font-size: 1rem;
+                        }
+
+                        @media only screen and (max-width: 350px) {
+                            white-space: wrap;
+                        }                        
 
                         &:hover {
                             text-decoration: underline;
@@ -188,6 +283,7 @@ export default {
 
                     .description {
                         line-height: 1.6rem;
+                        white-space: nowrap;
                     }
                 }
             }
