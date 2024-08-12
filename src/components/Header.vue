@@ -47,12 +47,12 @@ export default {
                 ) {
                     headerRef.value.classList.add('sticky-menu');
                     if (imgLogo) {
-                        imgLogo.setAttribute('src', './images/logo-landscape-removebg.png');
+                        imgLogo.setAttribute('src', '/images/logo-landscape-removebg.png');
                     }
                 } else {
                     headerRef.value.classList.remove('sticky-menu');
                     if (imgLogo) {
-                        imgLogo.setAttribute('src', './images/logo-square.png');
+                        imgLogo.setAttribute('src', '/images/logo-square.png');
                     }
                 }
             });
