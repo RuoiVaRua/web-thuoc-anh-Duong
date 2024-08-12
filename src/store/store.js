@@ -12,7 +12,8 @@ const store = createStore({
     actions: {
         async fetchProducts({ commit }) {
             try {
-                const response = await fetch("/data.json");
+                const base_URL = import.meta.env.VITE_BASE_URL || '/web-thuoc-anh-Duong/';
+                const response = await fetch(base_URL + "/data.json");
                 const products = await response.json();
                 commit("setProducts", products);
             } catch (error) {

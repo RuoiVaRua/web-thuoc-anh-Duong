@@ -2,7 +2,7 @@
     <div class="product-detail-container" v-if="product">
         <div class="product-infor">
             <div class="main-image">
-                <img alt="" :src="product.images[0]" />
+                <img alt="" :src="base_URL + product.images[0]" />
             </div>
             <div class="product-general-infor">
                 <h1 class="name">{{ product.name }}</h1>
@@ -43,6 +43,8 @@ export default {
         const store = useStore(); // Initialize store
         const route = useRoute(); // Khởi tạo route
 
+        const base_URL = import.meta.env.VITE_BASE_URL || '/web-thuoc-anh-Duong/';
+
         // Lấy id từ route
         const productId = ref(route.params.id); // Get id from route params
 
@@ -57,7 +59,7 @@ export default {
                 let imgInd = 0;
                 product.value.descriptions.forEach(value => {
                     if (value === 'img') {
-                        imageAndDescription.value.innerHTML += `<img alt="" src="${product.value.images[imgInd+1]}" />`;
+                        imageAndDescription.value.innerHTML += `<img alt="" src="${base_URL + product.value.images[imgInd+1]}" />`;
                         imgInd++;
                     } else {
                         imageAndDescription.value.innerHTML += `<p>${value}</p>`;
@@ -75,7 +77,8 @@ export default {
 
         return {
             product,
-            imageAndDescription
+            imageAndDescription,
+            base_URL
         };
     }
 };

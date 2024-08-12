@@ -5,7 +5,7 @@
             <header class="header">
                 <div class="logo">
                     <router-link to="/">
-                        <img src="/images/logo-square.png" alt="">
+                        <img :src="base_URL + '/images/logo-square.png'" alt="">
                     </router-link>
                 </div>
                 <nav>
@@ -34,6 +34,7 @@ export default {
     setup() {
         const headerRef = ref(null);
         let observer = null;
+        const base_URL = import.meta.env.VITE_BASE_URL || '/web-thuoc-anh-Duong/';
 
         const handleIntersection = (entries) => {
             entries.forEach(entry => {
@@ -47,12 +48,12 @@ export default {
                 ) {
                     headerRef.value.classList.add('sticky-menu');
                     if (imgLogo) {
-                        imgLogo.setAttribute('src', '/images/logo-landscape-removebg.png');
+                        imgLogo.setAttribute('src', base_URL + '/images/logo-landscape-removebg.png');
                     }
                 } else {
                     headerRef.value.classList.remove('sticky-menu');
                     if (imgLogo) {
-                        imgLogo.setAttribute('src', '/images/logo-square.png');
+                        imgLogo.setAttribute('src', base_URL + '/images/logo-square.png');
                     }
                 }
             });
@@ -86,7 +87,8 @@ export default {
         });        
 
         return {
-            headerRef
+            headerRef,
+            base_URL
         };
     }
 };

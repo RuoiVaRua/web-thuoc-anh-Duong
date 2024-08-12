@@ -6,7 +6,7 @@
             :key="product.id"
         >
             <a class="name" :href="'/product/' + product.id">
-                <img :src="product.images[0]" :alt="product.name" />
+                <img :src="base_URL + product.images[0]" :alt="product.name" />
             </a>
 
             <div class="name-price-contact">
@@ -39,6 +39,11 @@ import { mapGetters } from "vuex";
 export default {
     name: "ProductsList",
     name: "ProductsList",
+    data() {
+        return {
+            base_URL: import.meta.env.VITE_BASE_URL || '/web-thuoc-anh-Duong/'
+        }
+    },
     computed: {
         ...mapGetters(["allProducts"]), // Map getter to get products
         products() {

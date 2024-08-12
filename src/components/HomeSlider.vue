@@ -9,7 +9,7 @@
                 v-for="(image, index) in images"
                 :key="index"
             >
-                <img :src="image" alt="" />
+                <img :src="base_URL + image" alt="" />
             </div>
         </div>
         <button class="nav prev" @click="prevSlide">
@@ -41,7 +41,8 @@ export default {
                 '/images/Banner_03.webp',
                 '/images/banner-new.webp',
                 '/images/banner-tet-1.webp',
-            ]            
+            ],
+            base_URL: import.meta.env.VITE_BASE_URL || '/web-thuoc-anh-Duong/'            
         };
     },
     methods: {
