@@ -1,15 +1,11 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
-import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
+  base: '/web-thuoc-anh-Duong/',
   plugins: [
-    vue(),
-    visualizer({
-      filename: './dist/stats.html',
-      open: true,
-    }),    
+    vue()   
   ],
   resolve: {
     alias: {
