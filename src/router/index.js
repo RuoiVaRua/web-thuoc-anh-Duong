@@ -32,7 +32,7 @@ const routes = [
 ];
 
 const router = createRouter({
-    history: createWebHistory(import.meta.env.VITE_BASE_URL),
+    history: createWebHistory('/web-thuoc-anh-Duong/'),
     routes,
     scrollBehavior(to, from, savedPosition) {
         // Nếu có vị trí cuộn đã lưu, chuyển đến vị trí đó
