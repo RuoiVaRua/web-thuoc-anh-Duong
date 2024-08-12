@@ -1,3 +1,3 @@
 module.exports = {
-    publicPath: "/web-thuoc-anh-Duong/"
+    publicPath: process.env.VITE_BASE_URL || "/"
 };

@@ -31,7 +31,7 @@ const routes = [
     }    
 ];
 
-const base_URL = import.meta.env.VITE_BASE_URL || '/web-thuoc-anh-Duong/';
+const base_URL = import.meta.env.VITE_BASE_URL || '/';
 
 const router = createRouter({
     history: createWebHistory(base_URL),
