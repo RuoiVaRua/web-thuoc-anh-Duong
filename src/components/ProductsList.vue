@@ -41,7 +41,7 @@ export default {
     name: "ProductsList",
     data() {
         return {
-            base_URL: import.meta.env.VITE_BASE_URL || '/'
+            base_URL: import.meta.env.VITE_BASE_URL || './'
         }
     },
     computed: {

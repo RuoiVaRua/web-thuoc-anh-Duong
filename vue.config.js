@@ -1,3 +1,3 @@
 module.exports = {
-    publicPath: process.env.VITE_BASE_URL || "/"
+    publicPath: process.env.VITE_BASE_URL || "./"
 };

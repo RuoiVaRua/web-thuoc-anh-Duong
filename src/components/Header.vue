@@ -34,7 +34,7 @@ export default {
     setup() {
         const headerRef = ref(null);
         let observer = null;
-        const base_URL = import.meta.env.VITE_BASE_URL || '/';
+        const base_URL = import.meta.env.VITE_BASE_URL || './';
 
         const handleIntersection = (entries) => {
             entries.forEach(entry => {
