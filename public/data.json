@@ -3,12 +3,12 @@
         "id": "bo-cong-anh",
         "name": "Cây Bồ Công Anh",
         "images": [
-            "/images/BỒ CÔNG ANH/bo-cong-anh-364-1.jpg",
-            "/images/BỒ CÔNG ANH/bo-cong-anh-364-2.jpg",
-            "/images/BỒ CÔNG ANH/bo-cong-anh-364-3.jpg",
-            "/images/BỒ CÔNG ANH/Bo-cong-anh-say-kho-1024x768.jpg",
-            "/images/BỒ CÔNG ANH/bồ-công-anh.jpg",
-            "/images/BỒ CÔNG ANH/la-bo-cong-anh-kho-1.jpg"
+            "./images/BỒ CÔNG ANH/bo-cong-anh-364-1.jpg",
+            "./images/BỒ CÔNG ANH/bo-cong-anh-364-2.jpg",
+            "./images/BỒ CÔNG ANH/bo-cong-anh-364-3.jpg",
+            "./images/BỒ CÔNG ANH/Bo-cong-anh-say-kho-1024x768.jpg",
+            "./images/BỒ CÔNG ANH/bồ-công-anh.jpg",
+            "./images/BỒ CÔNG ANH/la-bo-cong-anh-kho-1.jpg"
         ],
         "price": 150000,
         "unit": "kg",
@@ -40,8 +40,8 @@
         "id": "la-sen",
         "name": "Lá Sen",
         "images": [
-            "/images/LÁ SEN/la-sen.jpg",
-            "/images/LÁ SEN/lá-sen.jpg"
+            "./images/LÁ SEN/la-sen.jpg",
+            "./images/LÁ SEN/lá-sen.jpg"
         ],
         "price": 200000,
         "unit": "kg",
@@ -64,12 +64,12 @@
         "id": "tam-that-bac",
         "name": "Tam Thất Bắc",
         "images": [
-            "/images/TAM THẤT BẮC/cây-tam-thất-bắc.jpg",
-            "/images/TAM THẤT BẮC/tam-that-panax-notoginseng.jpg",
-            "/images/TAM THẤT BẮC/cu-tam-that-bac1.jpg",
-            "/images/TAM THẤT BẮC/tam-that-bac-kho-111.jpg",
-            "/images/TAM THẤT BẮC/tam-that-1-535x480.jpg",
-            "/images/TAM THẤT BẮC/cu-tam-that-bac.jpg"
+            "./images/TAM THẤT BẮC/cây-tam-thất-bắc.jpg",
+            "./images/TAM THẤT BẮC/tam-that-panax-notoginseng.jpg",
+            "./images/TAM THẤT BẮC/cu-tam-that-bac1.jpg",
+            "./images/TAM THẤT BẮC/tam-that-bac-kho-111.jpg",
+            "./images/TAM THẤT BẮC/tam-that-1-535x480.jpg",
+            "./images/TAM THẤT BẮC/cu-tam-that-bac.jpg"
         ],
         "price": 300000,
         "unit": "kg",
@@ -101,10 +101,10 @@
         "id": "xa-den",
         "name": "Xạ Đen",
         "images": [
-            "/images/XẠ ĐEN/cây-xạ-đen.jpg",
-            "/images/XẠ ĐEN/dược-liệu-xạ-đen.jpg",
-            "/images/XẠ ĐEN/xạ-đen.jpg",
-            "/images/XẠ ĐEN/xa-den-dong-goi-900x818.jpg"
+            "./images/XẠ ĐEN/cây-xạ-đen.jpg",
+            "./images/XẠ ĐEN/dược-liệu-xạ-đen.jpg",
+            "./images/XẠ ĐEN/xạ-đen.jpg",
+            "./images/XẠ ĐEN/xa-den-dong-goi-900x818.jpg"
         ],
         "price": 250000,
         "unit": "kg",
@@ -131,9 +131,9 @@
         "id": "hat-sen",
         "name": "Hạt Sen",
         "images": [
-            "/images/HẠT SEN/hat-sen.jpg",
-            "/images/HẠT SEN/hat-sen-chua-mat-ngu.jpg",
-            "/images/HẠT SEN/Hat-Sen-image.jpg"
+            "./images/HẠT SEN/hat-sen.jpg",
+            "./images/HẠT SEN/hat-sen-chua-mat-ngu.jpg",
+            "./images/HẠT SEN/Hat-Sen-image.jpg"
         ],
         "price": 250000,
         "unit": "kg",

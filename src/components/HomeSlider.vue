@@ -36,11 +36,11 @@ export default {
         return {
             currentIndex: 0,
             images: [
-                '/images/Banner_01.webp',
-                '/images/Banner_02.webp',
-                '/images/Banner_03.webp',
-                '/images/banner-new.webp',
-                '/images/banner-tet-1.webp',
+                './images/Banner_01.webp',
+                './images/Banner_02.webp',
+                './images/Banner_03.webp',
+                './images/banner-new.webp',
+                './images/banner-tet-1.webp',
             ]            
         };
     },

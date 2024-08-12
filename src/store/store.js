@@ -12,7 +12,7 @@ const store = createStore({
     actions: {
         async fetchProducts({ commit }) {
             try {
-                const response = await fetch("/data.json");
+                const response = await fetch("./data.json");
                 const products = await response.json();
                 commit("setProducts", products);
             } catch (error) {
