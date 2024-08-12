@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import Contact from "@/views/Contact.vue";
-import ProductDetail from "../views/ProductDetail.vue";
+import ProductDetail from "@/views/ProductDetail.vue";
 
 const routes = [
     {
@@ -32,7 +32,7 @@ const routes = [
 ];
 
 const router = createRouter({
-    history: createWebHistory("/"),
+    history: createWebHistory(import.meta.env.VITE_BASE_URL),
     routes,
     scrollBehavior(to, from, savedPosition) {
         // Nếu có vị trí cuộn đã lưu, chuyển đến vị trí đó
