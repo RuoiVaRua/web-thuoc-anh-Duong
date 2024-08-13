@@ -144,7 +144,8 @@ export default {
     justify-content: space-between;
     gap: 50px;
     margin: 50px auto;
-
+    padding: 15px;
+    
     @media only screen and (max-width: 767px) {
         flex-direction: column;
         gap: 20px;

@@ -79,7 +79,6 @@ export default {
         .description {
             font-weight: 700;
             line-height: 28px;
-            max-height: 280px;
 
             @media only screen and (max-width: 575px) {
                 padding: 0 10px;
