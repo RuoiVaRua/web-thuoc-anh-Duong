@@ -12,7 +12,7 @@ const store = createStore({
     actions: {
         async fetchProducts({ commit }) {
             try {
-                const base_URL = import.meta.env.VITE_BASE_URL || './';
+                const base_URL = import.meta.env.VITE_BASE_URL || "";
                 const response = await fetch(base_URL + "/data.json");
                 const products = await response.json();
                 commit("setProducts", products);

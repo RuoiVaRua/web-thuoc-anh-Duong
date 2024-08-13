@@ -42,7 +42,7 @@ export default {
                 '/images/banner-new.webp',
                 '/images/banner-tet-1.webp',
             ],
-            base_URL: import.meta.env.VITE_BASE_URL || './'            
+            base_URL: import.meta.env.VITE_BASE_URL || ""            
         };
     },
     methods: {

@@ -7,8 +7,8 @@
                     <div class="content">
                         <p>Công ty Việt Hưng</p>
                         <p>Địa chỉ: xã Thường Kiệt - huyện Yên Mỹ - tỉnh Hưng Yên</p>
-                        <p>GPDKKD: 2700588366&nbsp; do Cục cảnh sát quản lý hành chính về trật tự xã hội&nbsp;cấp ngày 13/04/2021</p>
-                        <p>Điện thoại: 02293673999 – Di động : 081.779.0401</p>
+                        <!-- <p>GPDKKD: 2700588366&nbsp; do Cục cảnh sát quản lý hành chính về trật tự xã hội&nbsp;cấp ngày 13/04/2021</p> -->
+                        <p>Điện thoại: 033.358.1878 - 081.779.0401</p>
                         <p>Email : nhanqua839@gmail.com</p>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                         <i class="fa-solid fa-phone"></i>
                     </div>
                     <div class="detail">
-                        <a href="tel:081.779.0401">081.779.0401</a>
+                        <a href="tel:0333581878">033.358.1878</a>
                         <span class="description">Gọi cho chúng tôi ngay</span>
                     </div>
                 </div>

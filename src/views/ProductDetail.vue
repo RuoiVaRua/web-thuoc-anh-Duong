@@ -43,7 +43,7 @@ export default {
         const store = useStore(); // Initialize store
         const route = useRoute(); // Khởi tạo route
 
-        const base_URL = import.meta.env.VITE_BASE_URL || './';
+        const base_URL = import.meta.env.VITE_BASE_URL || "";
 
         // Lấy id từ route
         const productId = ref(route.params.id); // Get id from route params

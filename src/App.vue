@@ -3,12 +3,15 @@
         <Header />
         <router-view></router-view>
         <Footer />
+        <LazyLoadedComponent :fileName="'FixedContactButtons'" />
+        <!-- <LazyLoadedComponent :fileName="'GoToTopBtn'" /> -->
     </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
+import LazyLoadedComponent from "./components/LazyLoadedComponent.vue";
 import { mapActions } from "vuex";
 
 export default {
@@ -16,6 +19,7 @@ export default {
     components: {
         Header,
         Footer,
+        LazyLoadedComponent
     },
     created() {
         this.fetchProducts(); // Fetch products data on created hook
