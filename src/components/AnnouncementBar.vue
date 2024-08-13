@@ -6,13 +6,27 @@
             </div>
             <div class="right-section">
                 <aside>
-                    <a href="tel:0972086234"><i class="fa-solid fa-phone-volume"></i> 0972086234</a>
-                    <a href="mailto:dailongjsc.vn@gmail.com"><i class="fa-solid fa-envelope"></i> dailongjsc.vn@gmail.com</a>
+                    <a href="tel:081.779.0401"><i class="fa-solid fa-phone-volume"></i> 081.779.0401</a>
+                    <a href="mailto:nhanqua839@gmail.com"><i class="fa-solid fa-envelope"></i> nhanqua839@gmail.com</a>
                 </aside>
                 <aside>
                     <ul>
-                        <li><img :src="zaloImg" alt="Zalo" width="20" height="20"/></li>
-                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li>
+                            <a
+                                href="https://zalo.me/0817790401"
+                                target="_blank"
+                            >
+                                <img :src="zaloImg" alt="Zalo" width="20" height="20"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.facebook.com/profile.php?id=61559208080017"
+                                target="_blank"
+                            >
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </li>
                         <li><i class="fa-brands fa-instagram"></i></li>
                         <li><i class="fa-brands fa-square-x-twitter"></i></li>
                         <li><i class="fa-brands fa-square-youtube"></i></li>
@@ -256,7 +270,15 @@ export default {
                         align-items: center;
                         vertical-align: middle;
                         margin: 5px 10px;
-                        svg {
+
+                        a {
+                            width: 20px;
+                            height: 20px;
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        img, svg {
                             width: 20px;
                             height: 20px;
                         }

@@ -28,15 +28,15 @@ export default {
             switch (to.path) {
                 case "/about":
                     document.title =
-                        "Giới thiệu - " + "Việt Hưng - Thuốc Đông Y";
+                        "Giới thiệu - " + "Việt Hưng - Dược Liệu";
                     break;
 
                 case "/contact":
-                    document.title = "Liên hệ - " + "Việt Hưng - Thuốc Đông Y";
+                    document.title = "Liên hệ - " + "Việt Hưng - Dược Liệu";
                     break;
 
                 default:
-                    document.title = "Việt Hưng - Thuốc Đông Y";
+                    document.title = "Việt Hưng - Dược Liệu";
                     break;
             }
         },

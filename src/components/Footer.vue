@@ -8,8 +8,8 @@
                         <p>Công ty Việt Hưng</p>
                         <p>Địa chỉ: xã Thường Kiệt - huyện Yên Mỹ - tỉnh Hưng Yên</p>
                         <p>GPDKKD: 2700588366&nbsp; do Cục cảnh sát quản lý hành chính về trật tự xã hội&nbsp;cấp ngày 13/04/2021</p>
-                        <p>Điện thoại: 02293673999 – Di động : 0972086234</p>
-                        <p>Email : dailongjsc.vn@gmail.com</p>
+                        <p>Điện thoại: 02293673999 – Di động : 081.779.0401</p>
+                        <p>Email : nhanqua839@gmail.com</p>
                     </div>
                 </div>
                 <div class="products">
@@ -46,6 +46,7 @@
                 </div>
                 <div class="facebook">
                     <h3 class="title">@Facebook</h3>
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61559208080017&tabs&width=300&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=229258992396994&lazy=true" width="300" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" ></iframe>
                 </div>
             </div>
             <div class="bottom-section">
@@ -54,7 +55,7 @@
                         <i class="fa-solid fa-envelope"></i>
                     </div>
                     <div class="detail">
-                        <a href="mailto:dailongjsc.vn@gmail.com">dailongjsc.vn@gmail.com</a>
+                        <a href="mailto:nhanqua839@gmail.com">nhanqua839@gmail.com</a>
                         <span class="description">Gửi mail cho chúng tôi</span>
                     </div>
                 </div>
@@ -63,7 +64,7 @@
                         <i class="fa-solid fa-phone"></i>
                     </div>
                     <div class="detail">
-                        <a href="tel:0972086234">0972086234</a>
+                        <a href="tel:081.779.0401">081.779.0401</a>
                         <span class="description">Gọi cho chúng tôi ngay</span>
                     </div>
                 </div>
@@ -72,7 +73,7 @@
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
                     <div class="detail">
-                        <router-link to="/contact">Thường Kiệt - Yên Mỹ - Hưng Yên</router-link>
+                        <router-link to="/contact">Tổ Hoả, Lý Thường Kiệt, Yên Mỹ, Hưng Yên</router-link>
                         <span class="description">Nhận chỉ đường</span>
                     </div>
                 </div>
@@ -197,6 +198,10 @@ export default {
 
             .facebook {
                 flex: 5;
+
+                iframe {
+                    max-width: 100%;
+                }
             }
 
             @media only screen and (max-width: 1199px) {
@@ -218,10 +223,7 @@ export default {
             display: flex;
             align-items: center;
             width: 100%;
-
-            @media only screen and (max-width: 992px) {
-                flex-wrap: wrap;
-            }            
+            flex-wrap: wrap;
 
             & > div {
                 flex: 1;

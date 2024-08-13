@@ -12,25 +12,36 @@
                         <i class="fa-solid fa-location-dot"></i>
                         <span>Địa chỉ</span>
                     </div>
-                    <span>xã Lý Thường Kiệt - huyện Yên Mỹ - tỉnh Hưng Yên</span>
+                    <span>thôn Tổ Hoả, xã Lý Thường Kiệt, huyện Yên Mỹ, tỉnh Hưng Yên</span>
                 </div>
                 <div class="phone">
                     <div class="sub-title">
                         <i class="fa-solid fa-phone"></i>
                         <span>Điện thoại</span>
                     </div>
-                    <span>0972086234</span>
+                    <span>081.779.0401</span>
                 </div>
                 <div class="email">
                     <div class="sub-title">
                         <i class="fa-solid fa-envelope"></i>
                         <span>Email</span>
                     </div>
-                    <span>dailongjsc.vn@gmail.com</span>
+                    <span>nhanqua839@gmail.com</span>
                 </div>
                 <div class="social-media">
                     <div class="social-list">
-                        <i class="fa-brands fa-facebook-f"></i>
+                        <a
+                            href="https://zalo.me/0817790401"
+                            target="_blank"
+                        >
+                            <img :src="zaloImg" alt="Zalo" width="20" height="20"/>
+                        </a>
+                        <a
+                            href="https://www.facebook.com/profile.php?id=61559208080017"
+                            target="_blank"
+                        >
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
                         <i class="fa-brands fa-x-twitter"></i>
                         <i class="fa-brands fa-youtube"></i>
                         <i class="fa-brands fa-google-plus-g"></i>
@@ -72,9 +83,15 @@
 
 <script>
 import emailjs from '@emailjs/browser';
+import zaloImg from '@/assets/zalo-black.png';
 
 export default {
     name: "Contact",
+    data() {
+        return {
+            zaloImg: zaloImg
+        }
+    },    
     methods: {
         sendMail () {
             if (emailjs) {
@@ -145,7 +162,7 @@ export default {
             margin: 0 0 2.14em;
 
             @media only screen and (max-width: 767px) {
-                margin: 0 0 0.5em;
+                margin: 0;
             }  
             
             @media only screen and (max-width: 500px) {
@@ -187,7 +204,21 @@ export default {
             .social-list {
                 display: flex;
                 align-items: center;
-                gap: 36px;
+                justify-content: space-between;
+                width: 100%;
+                max-width: 300px;
+
+                a {
+                    width: 25px;
+                    height: 25px;
+                    display: flex;
+                    align-items: center;                    
+                }                
+
+                img, svg {
+                    height: 25px;
+                    width: 25px;
+                }
             }
         }
     }
@@ -203,7 +234,7 @@ export default {
             margin: 0 0 2.14em;
 
             @media only screen and (max-width: 767px) {
-                margin: 0 0 0.5em;
+                margin: 0;
             }               
 
             @media only screen and (max-width: 500px) {
