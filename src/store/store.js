@@ -25,7 +25,8 @@ const store = createStore({
         allProducts: (state) => state.products,
         getProductById: (state) => (id) => {
             return state.products.find(product => product.id === id);
-        }
+        },
+        // getAllProductIds: (state) => state.products.map(product => product.id)
     },
 });
 

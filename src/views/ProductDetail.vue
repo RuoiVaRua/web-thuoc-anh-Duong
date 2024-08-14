@@ -35,13 +35,14 @@
 <script>
 import { onMounted, ref, computed, watch, nextTick } from "vue";
 import { useStore } from "vuex"; // Import useStore from vuex
-import { useRoute } from 'vue-router'; // Import useRoute từ vue-router
+import { useRoute, useRouter } from 'vue-router'; // Import useRoute từ vue-router
 
 export default {
     name: "ProductDetail",
     setup () {
         const store = useStore(); // Initialize store
         const route = useRoute(); // Khởi tạo route
+        const router = useRouter(); // Initialize router
 
         const base_URL = import.meta.env.VITE_BASE_URL || "";
 
@@ -51,22 +52,30 @@ export default {
         // Sử dụng computed để lấy product theo id
         const product = computed(() => store.getters.getProductById(productId.value));
 
+        const productIds = ['bo-cong-anh', 'la-sen', 'tam-that-bac', 'xa-den', 'hat-sen'];
+
         const imageAndDescription = ref(null);
 
         const updateImageAndDescription = () => {    
-            nextTick(() => {  
-            if (imageAndDescription.value && product.value?.descriptions?.length) {
-                let imgInd = 0;
-                product.value.descriptions.forEach(value => {
-                    if (value === 'img') {
-                        imageAndDescription.value.innerHTML += `<img alt="" src="${base_URL + product.value.images[imgInd+1]}" />`;
-                        imgInd++;
-                    } else {
-                        imageAndDescription.value.innerHTML += `<p>${value}</p>`;
-                    }
-                });
-            }
-        })
+            nextTick(() => { 
+                if (imageAndDescription.value && product.value?.descriptions?.length) {
+                    let imgInd = 0;
+
+                    imageAndDescription.value.innerHTML = '';
+
+                    product.value.descriptions.forEach(value => {
+                        if (value === 'img') {
+                            imageAndDescription.value.innerHTML += `<img alt="" src="${base_URL + product.value.images[imgInd+1]}" />`;
+                            imgInd++;
+                        } else {
+                            imageAndDescription.value.innerHTML += `<p>${value}</p>`;
+                        }
+                    });
+                } else if (!productIds.includes(productId.value)) {
+                    // Use router.push to navigate to the home page
+                    router.push({ path: '/' });
+                }
+            })
         }
 
         // Optionally, use onMounted to initialize the rendering when component is mounted
@@ -74,6 +83,12 @@ export default {
 
         // Use watch to monitor changes to the product
         watch(product, updateImageAndDescription);
+
+        // Watch for changes in the route's id parameter
+        watch(() => route.params.id, (newId) => {
+            productId.value = newId;
+            updateImageAndDescription(); // Re-run the logic when the id changes
+        });        
 
         return {
             product,

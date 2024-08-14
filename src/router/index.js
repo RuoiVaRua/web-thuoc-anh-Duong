@@ -26,7 +26,7 @@ const routes = [
         component: ProductDetail,
     },    
     {
-        path: "/:rest-paths(.*)", // Route bắt tất cả các đường dẫn không xác định
+        path: "/:restPaths(.*)", // Route bắt tất cả các đường dẫn không xác định
         redirect: "/"
     }    
 ];
