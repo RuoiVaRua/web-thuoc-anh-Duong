@@ -5,7 +5,7 @@
             <header class="header">
                 <div class="logo">
                     <router-link to="/">
-                        <img :src="base_URL + '/images/logo-square.png'" alt="">
+                        <img :src="base_URL + '/images/viet-hung-logo-square.png'" alt="">
                     </router-link>
                 </div>
                 <nav>
@@ -48,12 +48,12 @@ export default {
                 ) {
                     headerRef.value.classList.add('sticky-menu');
                     if (imgLogo) {
-                        imgLogo.setAttribute('src', base_URL + '/images/logo-landscape-removebg.png');
+                        imgLogo.setAttribute('src', base_URL + '/images/viet-hung-logo-landscape.png');
                     }
                 } else {
                     headerRef.value.classList.remove('sticky-menu');
                     if (imgLogo) {
-                        imgLogo.setAttribute('src', base_URL + '/images/logo-square.png');
+                        imgLogo.setAttribute('src', base_URL + '/images/viet-hung-logo-square.png');
                     }
                 }
             });
