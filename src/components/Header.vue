@@ -44,7 +44,7 @@ export default {
                     entry.boundingClientRect.top < -120)
                     ||
                     (window.innerWidth <= 575 &&
-                    entry.boundingClientRect.top < -180)
+                    entry.boundingClientRect.top < -150)
                 ) {
                     headerRef.value.classList.add('sticky-menu');
                     if (imgLogo) {
