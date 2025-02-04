@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist --repo https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git",
+    "deploy": "GITHUB_ACTOR=<your-username> GITHUB_TOKEN=<your-token> GITHUB_REPOSITORY=<your-repo-name> gh-pages -d dist --repo https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git",
     "predeploy": "npm run build"
   },
   "dependencies": {
