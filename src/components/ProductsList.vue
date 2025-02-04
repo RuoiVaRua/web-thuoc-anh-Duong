@@ -5,9 +5,9 @@
             v-for="product in products"
             :key="product.id"
         >
-            <a class="name" :href="'/product/' + product.id">
+            <router-link class="name" :to="'/product/' + product.id">
                 <img :src="base_URL + product.images[0]" :alt="product.name" />
-            </a>
+            </router-link>
 
             <div class="name-price-contact">
                 <router-link class="name" :to="'/product/' + product.id">
