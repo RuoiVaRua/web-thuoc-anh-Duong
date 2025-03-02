@@ -2,7 +2,9 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import Contact from "@/views/Contact.vue";
+import Services from "@/views/Services.vue";
 import ProductDetail from "@/views/ProductDetail.vue";
+import ServiceDetail from "../views/ServiceDetail.vue";
 
 const routes = [
     {
@@ -16,6 +18,11 @@ const routes = [
         component: About,
     },
     {
+        path: "/services",
+        name: "Khám bệnh",
+        component: Services,
+    },
+    {
         path: "/contact",
         name: "Contact",
         component: Contact,
@@ -24,6 +31,11 @@ const routes = [
         path: "/product/:id",
         name: "ProductDetail",
         component: ProductDetail,
+    },    
+    {
+        path: "/service/:id",
+        name: "ServiceDetail",
+        component: ServiceDetail,
     },    
     {
         path: "/:restPaths(.*)", // Route bắt tất cả các đường dẫn không xác định

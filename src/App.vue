@@ -23,9 +23,10 @@ export default {
     },
     created() {
         this.fetchProducts(); // Fetch products data on created hook
+        this.fetchServices(); // Fetch services data on created hook
     },
     methods: {
-        ...mapActions(["fetchProducts"]), // Map fetchProducts action
+        ...mapActions(["fetchProducts", "fetchServices"]), // Map fetchProducts, fetchServices action
     },
     watch: {
         $route(to, _from) {

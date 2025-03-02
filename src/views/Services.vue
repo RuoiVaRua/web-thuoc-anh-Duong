@@ -1,32 +1,32 @@
 <template>
-    <div class="products-list">
-        <div
-            class="product-image"
-            v-for="product in products"
-            :key="product.id"
-        >
-            <router-link class="name" :to="'/product/' + product.id">
-                <img :src="base_URL + product.images[0]" :alt="product.name" />
-            </router-link>
+    <div class="services-list">
+        <h1 class="service-header">Dịch vụ khám chữa bệnh</h1>
+        <div class="service-item">
+            <div
+                class="service-image"
+                v-for="service in services"
+                :key="service.id"
+            >
+                <router-link class="name" :to="'/service/' + service.id">
+                    <img :src="base_URL + service.images[0]" :alt="service.name" />
+                    <div class="name-price-contact">
+                        <a class="name" :to="'/service/' + service.id">
+                            {{ service.name }}
+                        </a>
+                        <!-- <a class="name" :href="'/service/' + service.id">
+                            {{ service.name }}
+                        </a> -->
 
-            <div class="name-price-contact">
-                <router-link class="name" :to="'/product/' + product.id">
-                    {{ product.name }}
+                        <!-- <span class="price">
+                            {{ formatCurrencyVND(service.price) + " / " + service.unit }}
+                        </span> -->
+
+                        <a
+                            class="contact"
+                            >Xem chi tiết</a
+                        >
+                    </div>
                 </router-link>
-                <!-- <a class="name" :href="'/product/' + product.id">
-                    {{ product.name }}
-                </a> -->
-
-                <!-- <span class="price">
-                    {{ formatCurrencyVND(product.price) + " / " + product.unit }}
-                </span> -->
-
-                <a
-                    class="contact"
-                    href="https://zalo.me/0817790401"
-                    target="_blank"
-                    >Liên Hệ Mua Hàng</a
-                >
             </div>
         </div>
     </div>
@@ -37,16 +37,16 @@ import { formatCurrencyVND } from "../utils/price";
 import { mapGetters } from "vuex";
 
 export default {
-    name: "ProductsList",
+    name: "Services",
     data() {
         return {
             base_URL: import.meta.env.VITE_BASE_URL || ""
         }
     },
     computed: {
-        ...mapGetters(["allProducts"]), // Map getter to get products
-        products() {
-            return this.allProducts; // Use getter to get products
+        ...mapGetters(["allServices"]), // Map getter to get services
+        services() {
+            return this.allServices; // Use getter to get services
         }
     },
     methods: {
@@ -56,21 +56,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.products-list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: var(--gap-30);
+.services-list {
     max-width: var(--container-max-width);
     margin: 30px auto;
+    
+    .service-item {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: var(--gap-30);        
 
-    @media only screen and (max-width: 767px) {
-        gap: var(--gap-20);
-    }         
-
-    .product-image {
+        @media only screen and (max-width: 767px) {
+            gap: var(--gap-20);
+        }          
+    }
+    
+    .service-header{
+        display: block;
+        // margin: 20px 0;
+        margin: 20px auto 30px;
+        width: fit-content;
+        color: var(--main-green);
+    }
+    
+    .service-image {
         display: flex;
         flex-direction: column;
         align-items: center;
