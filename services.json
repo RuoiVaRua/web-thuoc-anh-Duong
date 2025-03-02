@@ -1,0 +1,44 @@
+[
+    {
+        "id": "benh-tri",
+        "name": "Bệnh trĩ",
+        "images": [
+            "/images/BỆNH TRĨ/benh-tri.jpg",
+            "/images/BỆNH TRĨ/benh-tri-3.png",
+            "/images/BỆNH TRĨ/benh-tri-2.webp",
+            "/images/BỆNH TRĨ/benh-tri-5.jpg",
+            "/images/BỆNH TRĨ/benh-tri-6.webp",
+            "/images/BỆNH TRĨ/benh-tri-4.png"
+        ],
+        "generalInfor": [
+			"1. Tổng quan về bệnh trĩ",
+			"Ai cũng có khả năng bị bệnh trĩ. Bệnh trĩ được chia thành 3 loại : trĩ nội, trĩ ngoại, trĩ hỗn hợp",
+			"Riêng trĩ nội, được chia thành độ 1,2,3,4. Bệnh nhân mới bị bệnh trĩ ( độ 1 và 2) chỉ cần uống thuốc, còn nếu để bệnh nặng hơn, phải dùng các biện pháp thủ thuật, vừa đau đớn vừa tốn kém lại vẫn rất dễ tái phát.",
+			"Bệnh nặng có thể gây ra các biến chứng như mất máu, viêm nhiễm, phù nề hậu môn...",
+			"Các triệu chứng cơ năng thường gặp: sa trĩ, táo bón, tiện máu, đau hậu môn, nứt hậu môn, polype"
+        ],
+        "descriptions": [
+			"<b>2. Định nghĩa:</b> \nTrĩ là một hệ thống đám rỗi tĩnh mạch sinh lý bình thường nằm ở vùng hậu môn trực tràng, do một nguyên nhân cơ hội nào đấy làm cho hệ thống tĩnh mạch trĩ sa giãn không hồi phục",
+			"img",
+			"<b>3. Phân loại trĩ</b> \n\t3.1 Trĩ nội : là những búi trĩ mà vị trí gốc của nó nằm trên đường lược \n\t\t- Độ 1: bệnh nhân đi đại tiện ra máu, búi trĩ còn nằm trong hậu môn \n\t\t- Độ 2: Búi trĩ sa ra ngoài sau khi đại tiện, nhưng tự co lên được \n\t\t- Độ 3: Búi trĩ sa ra ngoài sau khi đại tiện nhưng không tự co lên được phải dùng tay đẩy lên \n\t\t- Độ 4: búi trĩ liên tục sa ra ngoài \n\t3.2 Trĩ ngoại : là những búi trĩ mà vị trí gốc của nó nằm ở dưới đường lược \n\t3.3 Trĩ hỗn hợp : là những búi trĩ bao gồm cả trĩ nội và trĩ ngoại",
+			"img",
+			"<b>4. Triệu chứng lâm sàng</b>",
+			"- Chảy máu: Lúc đầu chảy máu rất kín đáo,bệnh nhân phát hiện khi nhìn vào giấy chùi vệ sinh sau khi đi đại tiện hoặc nhìn vào phân thấy tia máu nhỏ. Về sau mỗi khi đi cầu phải rặn nhiều do táo bón thì máu chảy thành giọt hay thành tia. Để muộn hơn nữa, mỗi lần đi cầu, ngồi xuống máu lại chảy nhiều, có khi máu chảy rất nhiều khiến bệnh nhân phải vào cấp cứu.  Đôi khi máu từ búi trĩ chảy ra đọng lại trong lòng trực tràng rồi sau đó mới đi cầu ra nhiều máu cục",
+			"- Sa búi trĩ :  thường xảy ra trễ hơn, sau một thời gian đi đại tiện có chảy máu. Lúc đầu, sau mỗi lần đi đại tiện thấy có khối nhỏ lồi ra ở lỗ hậu môn, sau đó khối đó tự tụt vào được. Càng về sau khối lồi ra đó to lên dần và không tự tụt vào được sau khi đi đại tiện nữa mà phải dùng tay nhét vào. Cuối cùng khối sa đó thường xuyên nằm ngoài hậu môn",
+			"- Ngoài ra, bệnh nhân có thể có triệu chứng như ngứa quanh hậu môn do búi trĩ sa ra ngoài và tiết dịch gây viêm da quanh hậu môn làm cho bệnh nhân cảm thấy hậu môn lúc nào cũng có cảm giác ướt và ngứa. Thông thường trĩ không gây đau, triệu chứng đau xảy ra khi có biến chứng như tắc mạch, sa trĩ nghẹt hay do các bệnh khác ở vùng hậu môn như nứt hậu môn, áp se cạnh hậu môn,...",
+			"img",
+			"<b>5. Điều kiện gây ra bệnh</b>",
+			"- Táo bón kinh niên: Bệnh nhân khi đi cầu phải rặn nhiều, khi rặn áp lực trong lòng ống hậu môn tăng lên gấp 10 lần. Táo bón lâu ngày làm xuất hiện các búi trĩ. Các búi trĩ dần dần to lên và khi to quá sẽ sa ra ngoài",
+			"- Hội chứng lỵ: bệnh nhân bị đại tiện nhiều lần, mỗi lần đại tiện phải rặn nhiều dễ bị trĩ",
+			"- Tăng áp lực ổ bụng: bệnh nhân viêm phế quản mạn tính, bệnh nhân giãn phế quản, ho nhiều, người lao động nặng như khuân vác,... làm tăng áp lực ổ bụng dễ xuất hiện bệnh trĩ",
+			"- Tăng áp lực tĩnh mạch trĩ: người phải đứng lâu, ngồi nhiều, ít đi lại như ngồi bàn giấy, nhân viên bán hàng, thợ may,.. dễ bị trĩ",
+			"- U bướu hậu môn trực tràng và vùng chung quanh ( như ung thư trực tràng, u bướu vùng tiểu khung, thái nhiều tháng,...) khi to lên có thể chèn ép và cản trở đường về tĩnh mạch hồi lưu làm cho các đám rối trĩ căng phồng lên tạo thành bệnh trĩ",
+			"img",
+			"<b>6. Phương pháp điều trị bằng y học cổ truyền</b>",
+			"\t6.1 Trĩ nội xuất huyết hay thể huyết ứ \n\t\t- Triệu chứng: đi ngoài ra máu tươi, đau, táo bón \n\t\t- Pháp điều trị : Bài thuốc 1 + tập khí công",
+			"\t6.2 Trĩ ngoại bị bội nhiễm hay thể thấp nhiệt \n\t\t- Triệu chứng : Vùng hậu môn sưng đỏ, đau, trĩ bị sưng to, đại tiện táo, nước tiểu đỏ \n\t\t- Pháp điều trị: Bài thuốc 2 + tập khí công",
+			"\t6.3 Trĩ lâu ngày thiếu máu, thể khí huyết đều hư \n\t\t- Triệu chứng: Đại tiện ra máu lâu ngày, hoa mắt ù tai, sắc mặt trắng bợt, người mệt mỏi, đoản hơi, tự ra mồ hôi, rêu lưỡi trắng mỏng \n\t\t- Pháp điều trị: Bài thuốc 3 + tập khí công",
+			"img"
+        ]
+    }
+]
