@@ -11,7 +11,7 @@
             "/images/BỆNH TRĨ/benh-tri-4.png"
         ],
         "generalInfor": [
-			"1. Tổng quan về bệnh trĩ",
+			"Tổng quan về bệnh trĩ:",
 			"Ai cũng có khả năng bị bệnh trĩ. Bệnh trĩ được chia thành 3 loại : trĩ nội, trĩ ngoại, trĩ hỗn hợp",
 			"Riêng trĩ nội, được chia thành độ 1,2,3,4. Bệnh nhân mới bị bệnh trĩ ( độ 1 và 2) chỉ cần uống thuốc, còn nếu để bệnh nặng hơn, phải dùng các biện pháp thủ thuật, vừa đau đớn vừa tốn kém lại vẫn rất dễ tái phát.",
 			"Bệnh nặng có thể gây ra các biến chứng như mất máu, viêm nhiễm, phù nề hậu môn...",
@@ -39,6 +39,11 @@
 			"\t6.2 Trĩ ngoại bị bội nhiễm hay thể thấp nhiệt \n\t\t- Triệu chứng : Vùng hậu môn sưng đỏ, đau, trĩ bị sưng to, đại tiện táo, nước tiểu đỏ \n\t\t- Pháp điều trị: Bài thuốc 2 + tập khí công",
 			"\t6.3 Trĩ lâu ngày thiếu máu, thể khí huyết đều hư \n\t\t- Triệu chứng: Đại tiện ra máu lâu ngày, hoa mắt ù tai, sắc mặt trắng bợt, người mệt mỏi, đoản hơi, tự ra mồ hôi, rêu lưỡi trắng mỏng \n\t\t- Pháp điều trị: Bài thuốc 3 + tập khí công",
 			"img"
-        ]
+        ],
+		"treatments": [
+			"Trĩ nội xuất huyết hay thể huyết ứ \n- Triệu chứng: đi ngoài ra máu tươi, đau, táo bón \n- Pháp điều trị : Bài thuốc 1 + tập khí công",
+			"Trĩ ngoại bị bội nhiễm hay thể thấp nhiệt \n- Triệu chứng : Vùng hậu môn sưng đỏ, đau, trĩ bị sưng to, đại tiện táo, nước tiểu đỏ \n- Pháp điều trị: Bài thuốc 2 + tập khí công",
+			"Trĩ lâu ngày thiếu máu, thể khí huyết đều hư \n- Triệu chứng: Đại tiện ra máu lâu ngày, hoa mắt ù tai, sắc mặt trắng bợt, người mệt mỏi, đoản hơi, tự ra mồ hôi, rêu lưỡi trắng mỏng \n- Pháp điều trị: Bài thuốc 3 + tập khí công"
+		]
     }
 ]
