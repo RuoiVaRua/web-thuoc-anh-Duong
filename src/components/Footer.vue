@@ -55,7 +55,7 @@
                         <i class="fa-solid fa-envelope"></i>
                     </div>
                     <div class="detail">
-                        <a href="mailto:nhanqua839@gmail.com">nhanqua839@gmail.com</a>
+                        <a :href="'mailto:' + mail">{{ mail }}</a>
                         <span class="description">Gửi mail cho chúng tôi</span>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                         <i class="fa-solid fa-phone"></i>
                     </div>
                     <div class="detail">
-                        <a href="tel:0333581878">033.358.1878</a>
+                        <a :href="'tel:' + phone">{{ formatPhone(phone) }}</a>
                         <span class="description">Gọi cho chúng tôi ngay</span>
                     </div>
                 </div>
@@ -78,15 +78,26 @@
                     </div>
                 </div>
             </div>
-            <span class="copy-right">Copyright ©2024 VIET HUNG. All Rights Reserved.</span>
+            <span class="copy-right">Copyright ©2025 VIET HUNG. All Rights Reserved.</span>
         </footer>
     </div>
 </template>
 
 <script>
+import { formatPhone } from '../utils/format-phone';
 
 export default {
-    name: "Footer"
+    name: "Footer",
+    data() {
+        return {
+            phone: import.meta.env.VITE_PHONE,
+            zalo: import.meta.env.VITE_ZALO,
+            mail: import.meta.env.VITE_MAIL
+        }
+    },
+    methods: {
+        formatPhone
+    }        
 };
 </script>
 

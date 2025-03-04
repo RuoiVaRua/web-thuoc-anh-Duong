@@ -19,25 +19,25 @@
                         <i class="fa-solid fa-phone"></i>
                         <span>Điện thoại</span>
                     </div>
-                    <span>033.358.1878</span>
+                    <a :href="'tel:' + phone">{{ formatPhone(phone) }}</a>
                 </div>
                 <div class="email">
                     <div class="sub-title">
                         <i class="fa-solid fa-envelope"></i>
                         <span>Email</span>
                     </div>
-                    <span>nhanqua839@gmail.com</span>
+                    <a :href="'mailto:' + mail">{{ mail }}</a>
                 </div>
                 <div class="social-media">
                     <div class="social-list">
                         <a
-                            href="https://zalo.me/0817790401"
+                            :href="'https://zalo.me/' + zalo"
                             target="_blank"
                         >
                             <img :src="zaloImg" alt="Zalo" width="20" height="20"/>
                         </a>
                         <a
-                            href="https://www.facebook.com/profile.php?id=61559208080017"
+                            :href="'https://www.facebook.com/profile.php?id=' + fbId"
                             target="_blank"
                         >
                             <i class="fa-brands fa-facebook-f"></i>
@@ -84,15 +84,21 @@
 <script>
 import emailjs from '@emailjs/browser';
 import zaloImg from '@/assets/zalo-black.png';
+import { formatPhone } from '../utils/format-phone';
 
 export default {
     name: "Contact",
     data() {
         return {
-            zaloImg: zaloImg
+            zaloImg: zaloImg,
+            phone: import.meta.env.VITE_PHONE,
+            zalo: import.meta.env.VITE_ZALO,
+            mail: import.meta.env.VITE_MAIL,
+            fbId: import.meta.env.VITE_FB_PAGE_ID,
         }
     },    
     methods: {
+        formatPhone,
         sendMail () {
             if (emailjs) {
                 const publicKey = import.meta.env.VITE_PUBLIC_KEY_EMAILJS;

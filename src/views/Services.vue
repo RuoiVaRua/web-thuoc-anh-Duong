@@ -125,7 +125,7 @@ export default {
                 font-size: 1.2rem;
                 outline: 0;
                 color: var(--third-green);
-                font-weight: 400;
+                font-weight: 600;
 
                 @media only screen and (max-width: 450px) {
                     font-size: 1rem;

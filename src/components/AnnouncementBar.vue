@@ -6,14 +6,14 @@
             </div>
             <div class="right-section">
                 <aside>
-                    <a href="tel:0333581878"><i class="fa-solid fa-phone-volume"></i> 033.358.1878</a>
-                    <a href="mailto:nhanqua839@gmail.com"><i class="fa-solid fa-envelope"></i> nhanqua839@gmail.com</a>
+                    <a :href="'tel:' + phone"><i class="fa-solid fa-phone-volume"></i> {{ formatPhone(phone) }}</a>
+                    <a :href="'mailto:' + mail"><i class="fa-solid fa-envelope"></i> {{ mail }}</a>
                 </aside>
                 <aside>
                     <ul>
                         <li>
                             <a
-                                href="https://zalo.me/0817790401"
+                                :href="'https://zalo.me/' + zalo"
                                 target="_blank"
                             >
                                 <img :src="zaloImg" alt="Zalo" width="20" height="20"/>
@@ -21,7 +21,7 @@
                         </li>
                         <li>
                             <a
-                                href="https://www.facebook.com/profile.php?id=61559208080017"
+                                :href="'https://www.facebook.com/profile.php?id=' + fbId"
                                 target="_blank"
                             >
                                 <i class="fa-brands fa-facebook"></i>
@@ -40,13 +40,21 @@
 
 <script>
 import zaloImg from '@/assets/zalo.png';
+import { formatPhone } from '../utils/format-phone';
 
 export default {
     name: "AnnouncementBar",
     data() {
         return {
-            zaloImg: zaloImg
+            zaloImg: zaloImg,
+            phone: import.meta.env.VITE_PHONE,
+            zalo: import.meta.env.VITE_ZALO,
+            mail: import.meta.env.VITE_MAIL,
+            fbId: import.meta.env.VITE_FB_PAGE_ID
         }
+    },
+    methods: {
+        formatPhone
     }
 };
 </script>

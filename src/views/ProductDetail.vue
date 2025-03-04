@@ -11,7 +11,7 @@
                 </ul>
                 <a
                     class="contact"
-                    href="https://zalo.me/0817790401"
+                    :href="'https://zalo.me/' + zalo"
                     target="_blank"
                 >
                     Liên Hệ Mua Hàng
@@ -45,6 +45,7 @@ export default {
         const router = useRouter(); // Initialize router
 
         const base_URL = import.meta.env.VITE_BASE_URL || "";
+        const zalo = import.meta.env.VITE_ZALO;
 
         // Lấy id từ route
         const productId = ref(route.params.id); // Get id from route params
@@ -93,7 +94,8 @@ export default {
         return {
             product,
             imageAndDescription,
-            base_URL
+            base_URL,
+            zalo
         };
     }
 };
