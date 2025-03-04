@@ -31,6 +31,10 @@ jobs:
           VITE_TEMPLATE_RECEIVE_ID_EMAILJS: ${{ secrets.VITE_TEMPLATE_RECEIVE_ID_EMAILJS }}          
           VITE_TEMPLATE_REPLY_ID_EMAILJS: ${{ secrets.VITE_TEMPLATE_REPLY_ID_EMAILJS }}          
           VITE_BASE_URL: ${{ secrets.VITE_BASE_URL }}          
+          VITE_PHONE: ${{ secrets.VITE_PHONE }}          
+          VITE_ZALO: ${{ secrets.VITE_ZALO }}          
+          VITE_MAIL: ${{ secrets.VITE_MAIL }}          
+          VITE_FB_PAGE_ID: ${{ secrets.VITE_FB_PAGE_ID }}          
 
       - name: Set up Git
         run: |
