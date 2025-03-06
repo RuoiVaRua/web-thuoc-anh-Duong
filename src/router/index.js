@@ -2,9 +2,10 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import Contact from "@/views/Contact.vue";
-import Services from "@/views/Services.vue";
 import ProductDetail from "@/views/ProductDetail.vue";
 import ServiceDetail from "../views/ServiceDetail.vue";
+import ServicesList from "../components/ServicesList.vue";
+import ProductsList from "../components/ProductsList.vue";
 
 const routes = [
     {
@@ -18,9 +19,14 @@ const routes = [
         component: About,
     },
     {
+        path: "/products",
+        name: "Products",
+        component: ProductsList,
+    },
+    {
         path: "/services",
-        name: "Khám bệnh",
-        component: Services,
+        name: "Services",
+        component: ServicesList,
     },
     {
         path: "/contact",
@@ -37,6 +43,12 @@ const routes = [
         name: "ServiceDetail",
         component: ServiceDetail,
     },    
+    // Catch all routes starting with "/service/" that do not match "/service/:id"
+    {
+        path: "/service/:rest(.*)",  // Wildcard for /service/
+        redirect: "/services"
+    },    
+    // Catch all routes that are not matched
     {
         path: "/:restPaths(.*)", // Route bắt tất cả các đường dẫn không xác định
         redirect: "/"

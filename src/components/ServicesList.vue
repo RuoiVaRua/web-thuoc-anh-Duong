@@ -1,7 +1,9 @@
 <template>
     <div class="services-list">
-        <h1 class="service-header">Dịch vụ khám chữa bệnh</h1>
-        <div class="service-item">
+		<div class="service-header-container">
+			<h2 class="service-header">Dịch vụ khám chữa bệnh</h2>
+		</div>
+        <div class="service-items">
             <div
                 class="service-image"
                 v-for="service in services"
@@ -37,7 +39,7 @@ import { formatCurrencyVND } from "../utils/price";
 import { mapGetters } from "vuex";
 
 export default {
-    name: "Services",
+    name: "ServicesList",
     data() {
         return {
             base_URL: import.meta.env.VITE_BASE_URL || ""
@@ -59,8 +61,13 @@ export default {
 .services-list {
     max-width: var(--container-max-width);
     margin: 30px auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--gap-20);
     
-    .service-item {
+    .service-items {
+		width: 100%;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -72,15 +79,39 @@ export default {
             gap: var(--gap-20);
         }          
     }
-    
-    .service-header{
-        display: block;
-        // margin: 20px 0;
-        margin: 20px auto 30px;
-        width: fit-content;
-        color: var(--main-green);
+
+    .service-header-container {
+		position: relative;
+		text-align: center;
+		width: 100%;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			background: linear-gradient(to right,rgba(255,255,255,.14) 0%,var(--main-green) 50%,var(--main-green) 53%,rgba(255,255,255,0) 100%);
+			background-size: auto;
+			width: 100%;
+			height: 2.5px;
+			background-size: cover;
+			z-index: -1;
+		}
+
+		.service-header{
+			width: fit-content;
+			display: inline-block;
+			padding: 0 20px !important;
+			background-color: #fff;
+			color: var(--main-green);
+			margin: 0 !important;
+			text-transform: capitalize;
+			font-weight: 700;
+			line-height: 1.2;			
+		}
     }
-    
+
     .service-image {
         display: flex;
         flex-direction: column;

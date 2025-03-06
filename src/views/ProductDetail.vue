@@ -114,7 +114,7 @@ export default {
         gap: 0;
     }            
 
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 650px) {
         margin: 20px auto;
     }            
 

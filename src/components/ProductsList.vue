@@ -1,32 +1,37 @@
 <template>
     <div class="products-list">
-        <div
-            class="product-image"
-            v-for="product in products"
-            :key="product.id"
-        >
-            <router-link class="name" :to="'/product/' + product.id">
-                <img :src="base_URL + product.images[0]" :alt="product.name" />
-            </router-link>
-
-            <div class="name-price-contact">
+        <div class="product-header-container">
+            <h2 class="product-header">Thuốc Đông Y</h2>
+        </div>
+        <div class="product-items">
+            <div
+                class="product-image"
+                v-for="product in products"
+                :key="product.id"
+            >
                 <router-link class="name" :to="'/product/' + product.id">
-                    {{ product.name }}
+                    <img :src="base_URL + product.images[0]" :alt="product.name" />
                 </router-link>
-                <!-- <a class="name" :href="'/product/' + product.id">
-                    {{ product.name }}
-                </a> -->
 
-                <!-- <span class="price">
-                    {{ formatCurrencyVND(product.price) + " / " + product.unit }}
-                </span> -->
+                <div class="name-price-contact">
+                    <router-link class="name" :to="'/product/' + product.id">
+                        {{ product.name }}
+                    </router-link>
+                    <!-- <a class="name" :href="'/product/' + product.id">
+                        {{ product.name }}
+                    </a> -->
 
-                <a
-                    class="contact"
-                    :href="'https://zalo.me/' + zalo"
-                    target="_blank"
-                    >Liên Hệ Mua Hàng</a
-                >
+                    <!-- <span class="price">
+                        {{ formatCurrencyVND(product.price) + " / " + product.unit }}
+                    </span> -->
+
+                    <a
+                        class="contact"
+                        :href="'https://zalo.me/' + zalo"
+                        target="_blank"
+                        >Liên Hệ Mua Hàng</a
+                    >
+                </div>
             </div>
         </div>
     </div>
@@ -58,18 +63,58 @@ export default {
 
 <style lang="scss" scoped>
 .products-list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: var(--gap-30);
     max-width: var(--container-max-width);
     margin: 30px auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--gap-20);    
 
-    @media only screen and (max-width: 767px) {
-        gap: var(--gap-20);
-    }         
+    .product-items {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: var(--gap-30);        
+
+        @media only screen and (max-width: 767px) {
+            gap: var(--gap-20);
+        }          
+    }
+    
+    .product-header-container {
+        position: relative;
+        text-align: center;
+        width: 100%;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background: linear-gradient(to right,rgba(255,255,255,.14) 0%,var(--main-green) 50%,var(--main-green) 53%,rgba(255,255,255,0) 100%);
+            background-size: auto;
+            width: 100%;
+            height: 2.5px;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .product-header{
+			width: fit-content;
+			display: inline-block;
+			padding: 0 20px !important;
+			background-color: #fff;
+			color: var(--main-green);
+			margin: 0 !important;
+			text-transform: capitalize;
+			font-weight: 700;
+			line-height: 1.2;
+        }    
+    }
 
     .product-image {
         display: flex;

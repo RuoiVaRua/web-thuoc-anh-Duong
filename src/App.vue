@@ -33,15 +33,23 @@ export default {
             switch (to.path) {
                 case "/about":
                     document.title =
-                        "Giới thiệu - " + "Việt Hưng - Dược Liệu";
+                        "Giới thiệu - " + "Việt Hưng";
                     break;
 
                 case "/contact":
-                    document.title = "Liên hệ - " + "Việt Hưng - Dược Liệu";
+                    document.title = "Liên hệ - " + "Việt Hưng";
+                    break;
+
+                case "/services":
+                    document.title = "Khám bệnh - " + "Việt Hưng";
+                    break;
+
+                case "/products":
+                    document.title = "Thuốc Đông Y - " + "Việt Hưng";
                     break;
 
                 default:
-                    document.title = "Việt Hưng - Dược Liệu";
+                    document.title = "Việt Hưng - Đông Y";
                     break;
             }
         },

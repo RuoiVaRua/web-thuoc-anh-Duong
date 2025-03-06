@@ -1,37 +1,35 @@
 <template>
-    <div class="service-container">
-        <div class="service-detail-container" v-if="service">
-            <div class="service-infor">
-                <div class="main-image">
-                    <img alt="" :src="base_URL + service.images[0]" />
-                </div>
-                <div class="service-general-infor">
-                    <h1 class="name">{{ service.name }}</h1>
-                    <ul>
-                        <li v-for="info in service.generalInfor" :key="info">{{ info }}</li>
-                    </ul>
-                    <a
-                        class="contact"
-                        :href="'https://zalo.me/' + zalo"
-                        target="_blank"
-                    >
-                        Liên Hệ Tư Vấn
-                    </a>
-                    <div class="social-media-sharing"></div>
-                </div>
+    <div class="service-detail-container" v-if="service">
+        <div class="service-infor">
+            <div class="main-image">
+                <img alt="" :src="base_URL + service.images[0]" />
             </div>
-            <ol class="treatment-description" ref="treatmentDescription"></ol>
-            <div class="service-description">
-                <div class="describe"><h3>Mô Tả Bệnh</h3></div>
-                <!-- <p class="about-viet-hung">
-                    <strong>
-                        Công ty Dược liệu Việt Hưng là một đơn vị uy tín chuyên cung cấp các sản phẩm dược liệu tự nhiên chất lượng cao, bao gồm thuốc đông y, dược liệu và trà thảo mộc. Với sứ mệnh mang đến cho cộng đồng những giải pháp chăm sóc sức khỏe an toàn, hiệu quả từ thiên nhiên, Việt Hưng luôn cam kết tuyển chọn nguyên liệu tinh túy nhất từ các vùng trồng dược liệu truyền thống, kết hợp với quy trình sản xuất hiện đại đạt chuẩn. Công ty tự hào mang đến cho khách hàng những sản phẩm dược liệu an toàn, lành tính, giúp phòng ngừa và điều trị bệnh tật, nâng cao sức khỏe và cải thiện chất lượng cuộc sống.
-                    </strong>
-                </p> -->
-                <div class="images-and-descriptions" ref="imageAndDescription"></div>
+            <div class="service-general-infor">
+                <h1 class="name">{{ service.name }}</h1>
+                <ul>
+                    <li v-for="info in service.generalInfor" :key="info">{{ info }}</li>
+                </ul>
+                <a
+                    class="contact"
+                    :href="'https://zalo.me/' + zalo"
+                    target="_blank"
+                >
+                    Liên Hệ Tư Vấn
+                </a>
+                <div class="social-media-sharing"></div>
             </div>
-            <div class="similar-services"></div>
         </div>
+        <ol class="treatment-description" ref="treatmentDescription"></ol>
+        <div class="service-description">
+            <div class="describe"><h3>Mô Tả Bệnh</h3></div>
+            <!-- <p class="about-viet-hung">
+                <strong>
+                    Công ty Dược liệu Việt Hưng là một đơn vị uy tín chuyên cung cấp các sản phẩm dược liệu tự nhiên chất lượng cao, bao gồm thuốc đông y, dược liệu và trà thảo mộc. Với sứ mệnh mang đến cho cộng đồng những giải pháp chăm sóc sức khỏe an toàn, hiệu quả từ thiên nhiên, Việt Hưng luôn cam kết tuyển chọn nguyên liệu tinh túy nhất từ các vùng trồng dược liệu truyền thống, kết hợp với quy trình sản xuất hiện đại đạt chuẩn. Công ty tự hào mang đến cho khách hàng những sản phẩm dược liệu an toàn, lành tính, giúp phòng ngừa và điều trị bệnh tật, nâng cao sức khỏe và cải thiện chất lượng cuộc sống.
+                </strong>
+            </p> -->
+            <div class="images-and-descriptions" ref="imageAndDescription"></div>
+        </div>
+        <div class="similar-services"></div>
     </div>
 </template>
 
@@ -56,7 +54,7 @@ export default {
         // Sử dụng computed để lấy service theo id
         const service = computed(() => store.getters.getServiceById(serviceId.value));
 
-        const serviceIds = ['bo-cong-anh', 'la-sen', 'tam-that-bac', 'xa-den', 'hat-sen'];
+        const serviceIds = ['benh-tri'];
 
         const imageAndDescription = ref(null);
         const treatmentDescription = ref(null);
@@ -117,178 +115,175 @@ export default {
 </script>
 
 <style lang="scss">
-.service-container { 
-    .service-detail-container {
-        width: 70%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 60px;
-        max-width: var(--container-max-width);
-        margin: 60px auto;    
+.service-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    max-width: var(--container-max-width);
+    margin: 60px auto;    
 
-        @media only screen and (max-width: 500px) {
-            margin: 20px auto;
-        }           
+    @media only screen and (max-width: 991px) {
+        gap: 0;
+    } 
+
+    @media only screen and (max-width: 650px) {
+        margin: 20px auto;
+    }                             
+
+    .service-infor {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: var(--gap-30);
 
         @media only screen and (max-width: 991px) {
-            gap: 0;
-        }                   
+            flex-direction: column;
+            align-items: center;
+        }        
 
-        .service-infor {
+        .main-image {
+            flex: 1;
+        }
+
+        .service-general-infor {
+            flex: 1;
             display: flex;
+            flex-direction: column;
             align-items: flex-start;
-            justify-content: center;
-            gap: var(--gap-30);
+            gap: var(--gap-20);
 
             @media only screen and (max-width: 991px) {
                 flex-direction: column;
                 align-items: center;
-            }        
+                justify-content: center;
+            }                    
 
-            .main-image {
-                flex: 1;
+            h1.name {
+                font-size: 1.8rem;
+                line-height: 1.2;
+                font-weight: 700;
+                text-transform: capitalize;
+                text-align: left;
+                color: var(--second-green);
             }
 
-            .service-general-infor {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: var(--gap-20);
-
-                @media only screen and (max-width: 991px) {
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                }                    
-
-                h1.name {
-                    font-size: 1.8rem;
-                    line-height: 1.2;
-                    font-weight: 700;
-                    text-transform: capitalize;
-                    text-align: left;
-                    color: var(--second-green);
-                }
-
-                ul {
-                    list-style: disc;
-                    padding-left: 1rem;
-                }
-
-                a {
-                    padding: 10px 30px;
-                    border-radius: 30px;
-                    font-weight: 500;
-                    min-width: 9.14em;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-align: center;
-                    border: 1px solid var(--second-green);
-                    color: var(--second-green);
-                    display: block;
-                    max-width: 200px;   
-                    transition: all 0.4s ease;  
-
-                    @media only screen and (max-width: 500px) {
-                        margin: 0;
-                    }                        
-                    
-                    &:hover {
-                        background-color: var(--second-green);
-                        color: #fff;
-                    }
-                }
+            ul {
+                list-style: disc;
+                padding-left: 1rem;
             }
 
+            a {
+                padding: 10px 30px;
+                border-radius: 30px;
+                font-weight: 500;
+                min-width: 9.14em;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                text-align: center;
+                border: 1px solid var(--second-green);
+                color: var(--second-green);
+                display: block;
+                max-width: 200px;   
+                transition: all 0.4s ease;  
+
+                @media only screen and (max-width: 500px) {
+                    margin: 0;
+                }                        
+                
+                &:hover {
+                    background-color: var(--second-green);
+                    color: #fff;
+                }
+            }
         }
 
-        .treatment-description {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+    }
 
-            background: #e0f1e9;
-            border: 1px solid #e0f1e9;
-            border-radius: 6px;
-            display: block;
-            padding: 8px 15px;
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    .treatment-description {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        background: #e0f1e9;
+        border: 1px solid #e0f1e9;
+        border-radius: 6px;
+        display: block;
+        padding: 8px 15px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+        width: 100%;
+
+        li {
+            margin-left: 30px;
+        }
+    }            
+
+    .service-description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--gap-30);
+
+        .describe {
+            text-align: center;
+            overflow: visible;
+            position: relative;  
             width: 100%;
 
-            li {
-                margin-left: 30px;
+            &::before {
+                content: " ";
+                display: table;
+                bottom: 20px !important;
+                position: absolute;
+                content: " ";
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                border-bottom: 1px solid var(--third-grey);
+                z-index: 1;                
             }
-        }            
 
-        .service-description {
+            h3 {
+                width: fit-content;
+                color: var(--second-green);
+                font-size: 1.71rem;
+                line-height: 1.7;
+                padding: 5px 0;
+                font-weight: 500;
+                position: relative;
+                margin: 0 auto;
+                padding: 0 1em;
+                z-index: 2;
+                background-color: white;
+
+                &::before {
+                    background: var(--second-green);
+                    color: var(--second-green);
+                    content: "";
+                    width: calc(100% - 2em);
+                    height: 2px;
+                    position: absolute;
+                    left: 1em;
+                    bottom: 0;
+                    z-index: 11;
+                }
+            }
+        }
+
+        .images-and-descriptions {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: var(--gap-30);
-
-            .describe {
-                text-align: center;
-                overflow: visible;
-                position: relative;  
-                width: 100%;
-
-                &::before {
-                    content: " ";
-                    display: table;
-                    bottom: 20px !important;
-                    position: absolute;
-                    content: " ";
-                    width: 100%;
-                    bottom: 0;
-                    left: 0;
-                    border-bottom: 1px solid var(--third-grey);
-                    z-index: 1;                
-                }
-
-                h3 {
-                    width: fit-content;
-                    color: var(--second-green);
-                    font-size: 1.71rem;
-                    line-height: 1.7;
-                    padding: 5px 0;
-                    font-weight: 500;
-                    position: relative;
-                    margin: 0 auto;
-                    padding: 0 1em;
-                    z-index: 2;
-                    background-color: white;
-
-                    &::before {
-                        background: var(--second-green);
-                        color: var(--second-green);
-                        content: "";
-                        width: calc(100% - 2em);
-                        height: 2px;
-                        position: absolute;
-                        left: 1em;
-                        bottom: 0;
-                        z-index: 11;
-                    }
-                }
+            gap: var(--gap-30);      
+            
+            & > img {
+                max-height: 400px;
+                object-fit: contain;
             }
 
-            .images-and-descriptions {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: var(--gap-30);      
-                
-                & > img {
-                    max-height: 400px;
-                    object-fit: contain;
-                }
-
-                p {
-                    width: 100%;
-                }
+            p {
+                width: 100%;
             }
         }
     }

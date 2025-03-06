@@ -12,9 +12,9 @@
                     <ul class="main-menu">
                         <li><router-link active-class="active" to="/">Trang chủ</router-link></li>
                         <li><router-link active-class="active" to="/about">Giới thiệu</router-link></li>
+                        <li><router-link active-class="active" to="/contact">Liên hệ</router-link></li>
                         <li><router-link active-class="active" to="/services">Khám bệnh</router-link></li>
                         <!-- <li><router-link active-class="active" to="/products">Sản phẩm</router-link></li> -->
-                        <li><router-link active-class="active" to="/contact">Liên hệ</router-link></li>
                     </ul>
                 </nav>
             </header>

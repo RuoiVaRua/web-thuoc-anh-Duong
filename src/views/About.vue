@@ -1,7 +1,9 @@
 <template>
 <div class="about-container">
-    <h2>Giới thiệu công ty</h2>
-    <hr/>
+    <div class="title-container">
+        <h2 class="title">Giới thiệu công ty</h2>
+    </div>
+    <!-- <hr/> -->
     <p style="text-align: justify;">Công ty Dược liệu Việt Hưng là một đơn vị uy tín chuyên cung cấp các sản phẩm dược liệu tự nhiên chất lượng cao, bao gồm thuốc đông y, dược liệu và trà thảo mộc. Với sứ mệnh mang đến cho cộng đồng những giải pháp chăm sóc sức khỏe an toàn, hiệu quả từ thiên nhiên, Việt Hưng luôn cam kết tuyển chọn nguyên liệu tinh túy nhất từ các vùng trồng dược liệu truyền thống, kết hợp với quy trình sản xuất hiện đại đạt chuẩn. Công ty tự hào mang đến cho khách hàng những sản phẩm dược liệu an toàn, lành tính, giúp phòng ngừa và điều trị bệnh tật, nâng cao sức khỏe và cải thiện chất lượng cuộc sống.</p>
     <div>
         <figure>
@@ -24,9 +26,35 @@ export default {
         margin: 32px auto;
         padding: 0 16px;
 
-        h2 {
+        .title-container {
+            position: relative;
             text-align: center;
-            margin-bottom: .7rem;
+            width: 100%;
+            margin-bottom: 20px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                background: linear-gradient(to right,rgba(255,255,255,.14) 0%,var(--main-green) 50%,var(--main-green) 53%,rgba(255,255,255,0) 100%);
+                background-size: auto;
+                width: 100%;
+                height: 2.5px;
+                background-size: cover;
+                z-index: -1;
+            }
+
+            h2.title {
+                display: inline-block;
+                padding: 0 20px !important;
+                background-color: #fff;
+                color: var(--main-green);
+                text-transform: capitalize;
+                font-weight: 700;
+                line-height: 1.2;
+            }
         }
 
         hr {

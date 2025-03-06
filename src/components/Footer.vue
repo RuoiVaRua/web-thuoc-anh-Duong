@@ -13,7 +13,7 @@
                     </div>
                 </div>
                 <div class="products">
-                    <h3 class="title">Sản phẩm</h3>
+                    <h3 class="title">Thuốc Đông Y</h3>
                     <div class="content">
                         <ul>
                             <li>

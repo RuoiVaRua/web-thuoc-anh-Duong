@@ -3,7 +3,7 @@
 
     <div class="general-introduction">
         <div class="title-container">
-            <h3 class="title">Giới Thiệu Chung</h3>
+            <h2 class="title">Giới Thiệu Chung</h2>
         </div>
         <div class="description">Công ty Dược liệu Việt Hưng là một đơn vị uy tín chuyên cung cấp các sản phẩm dược liệu tự nhiên chất lượng cao, bao gồm thuốc đông y, dược liệu và trà thảo mộc. Với sứ mệnh mang đến cho cộng đồng những giải pháp chăm sóc sức khỏe an toàn, hiệu quả từ thiên nhiên, Việt Hưng luôn cam kết tuyển chọn nguyên liệu tinh túy nhất từ các vùng trồng dược liệu truyền thống, kết hợp với quy trình sản xuất hiện đại đạt chuẩn. Công ty tự hào mang đến cho khách hàng những sản phẩm dược liệu an toàn, lành tính, giúp phòng ngừa và điều trị bệnh tật, nâng cao sức khỏe và cải thiện chất lượng cuộc sống.</div>
         <router-link to="/about">
@@ -14,15 +14,17 @@
     </div>
 
     <ProductsList />
+    <ServicesList />
 </template>
 
 <script>
 import HomeSlider from '../components/HomeSlider.vue';
 import ProductsList from '../components/ProductsList.vue';
+import ServicesList from '../components/ServicesList.vue';
 
 export default {
     name: "Home",
-    components: { HomeSlider, ProductsList }
+    components: { HomeSlider, ProductsList, ServicesList }
 };
 </script>
 
@@ -63,13 +65,12 @@ export default {
                 z-index: -1;
             }
 
-            h3.title {
+            h2.title {
                 display: inline-block;
                 padding: 0 20px !important;
                 background-color: #fff;
                 color: var(--main-green);
                 margin: 0 !important;
-                font-size: 2rem;
                 text-transform: capitalize;
                 font-weight: 700;
                 line-height: 1.2;
