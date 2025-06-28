@@ -128,7 +128,7 @@ export default {
                 max-width:unset;
                 height: var(--fixed-header-height);
                 z-index: 1000;
-                background: rgba(247,245,243,.9) !important;
+                background: rgba(247,245,243,1) !important;
                 box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
                 transition: .5s ease;     
                 animation: 0.5s ease 0s 1 normal both running header-show-down;
@@ -229,7 +229,11 @@ export default {
                 @media only screen and (max-width: 575px) {
                     // flex: 2;
                     height: 60px;
-                }                 
+                }     
+                
+                @media only screen and (min-width: 576px) and (max-width: 991px) {
+                    flex: 2;
+                }                
 
                 .main-menu {
                     display: flex;
@@ -238,6 +242,10 @@ export default {
 
                     @media only screen and (max-width: 650px) {
                         gap: var(--gap-20);
+                    }                       
+
+                    @media only screen and (max-width: 450px) {
+                        font-size: 0.9em;
                     }                       
 
                     @media only screen and (max-width: 300px) {
