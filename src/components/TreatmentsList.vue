@@ -1,26 +1,26 @@
 <template>
-    <div class="services-list">
-		<div class="service-header-container">
-			<h2 class="service-header">Dịch vụ khám chữa bệnh</h2>
+    <div class="treatments-list">
+		<div class="treatment-header-container">
+			<h2 class="treatment-header">Dịch vụ khám chữa bệnh</h2>
 		</div>
-        <div class="service-items">
+        <div class="treatment-items">
             <div
-                class="service-image"
-                v-for="service in services"
-                :key="service.id"
+                class="treatment-image"
+                v-for="treatment in treatments"
+                :key="treatment.id"
             >
-                <router-link class="name" :to="'/service/' + service.id">
-                    <img :src="base_URL + service.images[0]" :alt="service.name" />
+                <router-link class="name" :to="'/treatment/' + treatment.id">
+                    <img :src="base_URL + treatment.images[0]" :alt="treatment.name" />
                     <div class="name-price-contact">
-                        <a class="name" :to="'/service/' + service.id">
-                            {{ service.name }}
+                        <a class="name" :to="'/treatment/' + treatment.id">
+                            {{ treatment.name }}
                         </a>
-                        <!-- <a class="name" :href="'/service/' + service.id">
-                            {{ service.name }}
+                        <!-- <a class="name" :href="'/treatment/' + treatment.id">
+                            {{ treatment.name }}
                         </a> -->
 
                         <!-- <span class="price">
-                            {{ formatCurrencyVND(service.price) + " / " + service.unit }}
+                            {{ formatCurrencyVND(treatment.price) + " / " + treatment.unit }}
                         </span> -->
 
                         <a
@@ -39,16 +39,16 @@ import { formatCurrencyVND } from "../utils/price";
 import { mapGetters } from "vuex";
 
 export default {
-    name: "ServicesList",
+    name: "TreatmentsList",
     data() {
         return {
             base_URL: import.meta.env.VITE_BASE_URL || ""
         }
     },
     computed: {
-        ...mapGetters(["allServices"]), // Map getter to get services
-        services() {
-            return this.allServices; // Use getter to get services
+        ...mapGetters(["allTreatments"]), // Map getter to get treatments
+        treatments() {
+            return this.allTreatments; // Use getter to get treatments
         }
     },
     methods: {
@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.services-list {
+.treatments-list {
     max-width: var(--container-max-width);
     margin: 30px auto;
 	display: flex;
@@ -66,7 +66,7 @@ export default {
 	align-items: center;
 	gap: var(--gap-20);
     
-    .service-items {
+    .treatment-items {
 		width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -80,7 +80,7 @@ export default {
         }          
     }
 
-    .service-header-container {
+    .treatment-header-container {
 		position: relative;
 		text-align: center;
 		width: 100%;
@@ -99,7 +99,7 @@ export default {
 			z-index: -1;
 		}
 
-		.service-header{
+		.treatment-header{
 			width: fit-content;
 			display: inline-block;
 			padding: 0 20px !important;
@@ -112,7 +112,7 @@ export default {
 		}
     }
 
-    .service-image {
+    .treatment-image {
         display: flex;
         flex-direction: column;
         align-items: center;

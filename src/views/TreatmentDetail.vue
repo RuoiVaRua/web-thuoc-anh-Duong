@@ -1,13 +1,13 @@
 <template>
-    <div class="service-detail-container" v-if="service">
-        <div class="service-infor">
+    <div class="treatment-detail-container" v-if="treatment">
+        <div class="treatment-infor">
             <div class="main-image">
-                <img alt="" :src="base_URL + service.images[0]" />
+                <img alt="" :src="base_URL + treatment.images[0]" />
             </div>
-            <div class="service-general-infor">
-                <h1 class="name">{{ service.name }}</h1>
+            <div class="treatment-general-infor">
+                <h1 class="name">{{ treatment.name }}</h1>
                 <ul>
-                    <li v-for="info in service.generalInfor" :key="info">{{ info }}</li>
+                    <li v-for="info in treatment.generalInfor" :key="info">{{ info }}</li>
                 </ul>
                 <a
                     class="contact"
@@ -20,7 +20,7 @@
             </div>
         </div>
         <ol class="treatment-description" ref="treatmentDescription"></ol>
-        <div class="service-description">
+        <div class="treatment-description">
             <div class="describe"><h3>Mô Tả Bệnh</h3></div>
             <!-- <p class="about-viet-hung">
                 <strong>
@@ -29,7 +29,7 @@
             </p> -->
             <div class="images-and-descriptions" ref="imageAndDescription"></div>
         </div>
-        <div class="similar-services"></div>
+        <div class="similar-treatments"></div>
     </div>
 </template>
 
@@ -39,7 +39,7 @@ import { useStore } from "vuex"; // Import useStore from vuex
 import { useRoute, useRouter } from 'vue-router'; // Import useRoute từ vue-router
 
 export default {
-    name: "ServiceDetail",
+    name: "TreatmentDetail",
     setup () {
         const store = useStore(); // Initialize store
         const route = useRoute(); // Khởi tạo route
@@ -49,12 +49,12 @@ export default {
         const zalo = import.meta.env.VITE_ZALO;
 
         // Lấy id từ route
-        const serviceId = ref(route.params.id); // Get id from route params
+        const treatmentId = ref(route.params.id); // Get id from route params
 
-        // Sử dụng computed để lấy service theo id
-        const service = computed(() => store.getters.getServiceById(serviceId.value));
+        // Sử dụng computed để lấy treatment theo id
+        const treatment = computed(() => store.getters.getTreatmentById(treatmentId.value));
 
-        const serviceIds = ['benh-tri'];
+        const treatmentIds = ['benh-tri'];
 
         const imageAndDescription = ref(null);
         const treatmentDescription = ref(null);
@@ -64,27 +64,27 @@ export default {
                 if (
                     imageAndDescription.value && 
                     treatmentDescription.value && 
-                    service.value?.descriptions?.length && 
-                    service.value?.treatments?.length
+                    treatment.value?.descriptions?.length && 
+                    treatment.value?.treatments?.length
                 ) {
                     let imgInd = 0;
 
                     imageAndDescription.value.innerHTML = '';
                     treatmentDescription.value.innerHTML = '<h4>Phương pháp điều trị bằng y học cổ truyền</h4>';
 
-                    service.value.descriptions.forEach(value => {
+                    treatment.value.descriptions.forEach(value => {
                         if (value === 'img') {
-                            imageAndDescription.value.innerHTML += `<img alt="" src="${base_URL + service.value.images[imgInd+1]}" />`;
+                            imageAndDescription.value.innerHTML += `<img alt="" src="${base_URL + treatment.value.images[imgInd+1]}" />`;
                             imgInd++;
                         } else {
                             imageAndDescription.value.innerHTML += `<p>${value}</p>`;
                         }
                     });
                     
-                    service.value.treatments.forEach(value => {
+                    treatment.value.treatments.forEach(value => {
                         treatmentDescription.value.innerHTML += `<li>${value}</li>`;
                     });
-                } else if (!serviceIds.includes(serviceId.value)) {
+                } else if (!treatmentIds.includes(treatmentId.value)) {
                     // Use router.push to navigate to the home page
                     router.push({ path: '/' });
                 }
@@ -94,17 +94,17 @@ export default {
         // Optionally, use onMounted to initialize the rendering when component is mounted
         onMounted(updateImageAndDescription);
 
-        // Use watch to monitor changes to the service
-        watch(service, updateImageAndDescription);
+        // Use watch to monitor changes to the treatment
+        watch(treatment, updateImageAndDescription);
 
         // Watch for changes in the route's id parameter
         watch(() => route.params.id, (newId) => {
-            serviceId.value = newId;
+            treatmentId.value = newId;
             updateImageAndDescription(); // Re-run the logic when the id changes
         });        
 
         return {
-            service,
+            treatment,
             imageAndDescription,
             treatmentDescription,
             base_URL,
@@ -115,7 +115,7 @@ export default {
 </script>
 
 <style lang="scss">
-.service-detail-container {
+.treatment-detail-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -131,7 +131,7 @@ export default {
         margin: 20px auto;
     }                             
 
-    .service-infor {
+    .treatment-infor {
         display: flex;
         align-items: flex-start;
         justify-content: center;
@@ -146,7 +146,7 @@ export default {
             flex: 1;
         }
 
-        .service-general-infor {
+        .treatment-general-infor {
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -219,7 +219,7 @@ export default {
         }
     }            
 
-    .service-description {
+    .treatment-description {
         display: flex;
         flex-direction: column;
         align-items: center;

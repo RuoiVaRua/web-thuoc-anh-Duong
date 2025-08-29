@@ -102,7 +102,7 @@ export default {
         sendMail () {
             if (emailjs) {
                 const publicKey = import.meta.env.VITE_PUBLIC_KEY_EMAILJS;
-                const serviceID = import.meta.env.VITE_SERVICE_ID_EMAILJS;
+                const treatmentID = import.meta.env.VITE_SERVICE_ID_EMAILJS;
                 const templateReceiveID = import.meta.env.VITE_TEMPLATE_RECEIVE_ID_EMAILJS;
                 // const templateReplyID = import.meta.env.VITE_TEMPLATE_REPLY_ID_EMAILJS;
 
@@ -118,7 +118,7 @@ export default {
                     message: document.getElementById("message").value,
                 }
 
-                emailjs.send(serviceID, templateReceiveID, params)
+                emailjs.send(treatmentID, templateReceiveID, params)
                     .then(response => {
                         if (response.status === 200) {
                             alert("Chân thành cảm ơn bạn đã góp ý cho chúng tôi.\nChúng tôi sẽ phản hồi trong thời gian sớm nhất");
@@ -129,7 +129,7 @@ export default {
                             //     email_id: document.getElementById("email").value,
                             // };
 
-                            // emailjs.send(serviceID, templateReplyID, paramsResponse);                            
+                            // emailjs.send(treatmentID, templateReplyID, paramsResponse);                            
                         }
                     })
             }

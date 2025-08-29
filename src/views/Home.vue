@@ -1,30 +1,31 @@
 <template>
-    <HomeSlider/>
+    <!-- <HomeSlider/> -->
 
     <div class="general-introduction">
         <div class="title-container">
-            <h2 class="title">Giới Thiệu Chung</h2>
+            <h2 class="title">Về Chúng Tôi</h2>
         </div>
         <div class="description">Công ty Dược liệu Việt Hưng là một đơn vị uy tín chuyên cung cấp các sản phẩm dược liệu tự nhiên chất lượng cao, bao gồm thuốc đông y, dược liệu và trà thảo mộc. Với sứ mệnh mang đến cho cộng đồng những giải pháp chăm sóc sức khỏe an toàn, hiệu quả từ thiên nhiên, Việt Hưng luôn cam kết tuyển chọn nguyên liệu tinh túy nhất từ các vùng trồng dược liệu truyền thống, kết hợp với quy trình sản xuất hiện đại đạt chuẩn. Công ty tự hào mang đến cho khách hàng những sản phẩm dược liệu an toàn, lành tính, giúp phòng ngừa và điều trị bệnh tật, nâng cao sức khỏe và cải thiện chất lượng cuộc sống.</div>
-        <router-link to="/about">
+        <!-- <router-link to="/about">
             <button class="show-more">
                 Xem Thêm
             </button>
-        </router-link>
+        </router-link> -->
     </div>
 
-    <ProductsList />
-    <ServicesList />
+    <!-- <ProductsList /> -->
+    <TreatmentsList />
 </template>
 
 <script>
-import HomeSlider from '../components/HomeSlider.vue';
-import ProductsList from '../components/ProductsList.vue';
-import ServicesList from '../components/ServicesList.vue';
+// import HomeSlider from '../components/HomeSlider.vue';
+// import ProductsList from '../components/ProductsList.vue';
+import TreatmentsList from '../components/TreatmentsList.vue';
 
 export default {
     name: "Home",
-    components: { HomeSlider, ProductsList, ServicesList }
+    // components: { HomeSlider, ProductsList, TreatmentsList }
+    components: { TreatmentsList }
 };
 </script>
 

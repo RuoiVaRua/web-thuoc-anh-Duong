@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/views/Home.vue";
-import About from "@/views/About.vue";
+// import About from "@/views/About.vue";
 import Contact from "@/views/Contact.vue";
-import ProductDetail from "@/views/ProductDetail.vue";
-import ServiceDetail from "../views/ServiceDetail.vue";
-import ServicesList from "../components/ServicesList.vue";
-import ProductsList from "../components/ProductsList.vue";
+// import ProductDetail from "@/views/ProductDetail.vue";
+import TreatmentDetail from "../views/TreatmentDetail.vue";
+// import TreatmentsList from "../components/TreatmentsList.vue";
+// import ProductsList from "../components/ProductsList.vue";
 
 const routes = [
     {
@@ -13,41 +13,41 @@ const routes = [
         name: "Home",
         component: Home,
     },
-    {
-        path: "/about",
-        name: "About",
-        component: About,
-    },
-    {
-        path: "/products",
-        name: "Products",
-        component: ProductsList,
-    },
-    {
-        path: "/services",
-        name: "Services",
-        component: ServicesList,
-    },
+    // {
+    //     path: "/about",
+    //     name: "About",
+    //     component: About,
+    // },
+    // {
+    //     path: "/products",
+    //     name: "Products",
+    //     component: ProductsList,
+    // },
+    // {
+    //     path: "/treatment",
+    //     name: "Treatments",
+    //     component: TreatmentsList,
+    // },
     {
         path: "/contact",
         name: "Contact",
         component: Contact,
     },
+    // {
+    //     path: "/product/:id",
+    //     name: "ProductDetail",
+    //     component: ProductDetail,
+    // },    
     {
-        path: "/product/:id",
-        name: "ProductDetail",
-        component: ProductDetail,
+        path: "/treatment/:id",
+        name: "TreatmentDetail",
+        component: TreatmentDetail,
     },    
-    {
-        path: "/service/:id",
-        name: "ServiceDetail",
-        component: ServiceDetail,
-    },    
-    // Catch all routes starting with "/service/" that do not match "/service/:id"
-    {
-        path: "/service/:rest(.*)",  // Wildcard for /service/
-        redirect: "/services"
-    },    
+    // Catch all routes starting with "/treatment/" that do not match "/treatment/:id"
+    // {
+    //     path: "/treatment/:rest(.*)",  // Wildcard for /treatment/
+    //     redirect: "/treatment"
+    // },    
     // Catch all routes that are not matched
     {
         path: "/:restPaths(.*)", // Route bắt tất cả các đường dẫn không xác định

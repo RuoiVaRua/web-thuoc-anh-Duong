@@ -23,33 +23,33 @@ export default {
     },
     created() {
         this.fetchProducts(); // Fetch products data on created hook
-        this.fetchServices(); // Fetch services data on created hook
+        this.fetchTreatments(); // Fetch treatments data on created hook
     },
     methods: {
-        ...mapActions(["fetchProducts", "fetchServices"]), // Map fetchProducts, fetchServices action
+        ...mapActions(["fetchProducts", "fetchTreatments"]), // Map fetchProducts, fetchTreatments action
     },
     watch: {
         $route(to, _from) {
             switch (to.path) {
-                case "/about":
-                    document.title =
-                        "Giới thiệu - " + "Việt Hưng";
-                    break;
+                // case "/about":
+                //     document.title =
+                //         "Giới thiệu - " + "Việt Hưng";
+                //     break;
 
                 case "/contact":
                     document.title = "Liên hệ - " + "Việt Hưng";
                     break;
 
-                case "/services":
-                    document.title = "Khám bệnh - " + "Việt Hưng";
-                    break;
+                // case "/treatment":
+                //     document.title = "Khám bệnh - " + "Việt Hưng";
+                //     break;
 
-                case "/products":
-                    document.title = "Thuốc Đông Y - " + "Việt Hưng";
-                    break;
+                // case "/products":
+                //     document.title = "Thuốc Đông Y - " + "Việt Hưng";
+                //     break;
 
                 default:
-                    document.title = "Việt Hưng - Đông Y";
+                    document.title = "Liệu trình chữa bệnh - " + "Việt Hưng";
                     break;
             }
         },

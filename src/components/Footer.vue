@@ -78,7 +78,7 @@
                     </div>
                 </div>
             </div>
-            <span class="copy-right">Copyright ©2025 VIET HUNG. All Rights Reserved.</span>
+            <span class="copy-right">Copyright ©{{ new Date().getFullYear() }} VIET HUNG. All Rights Reserved.</span>
         </footer>
     </div>
 </template>
