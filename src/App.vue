@@ -41,7 +41,7 @@ export default {
                     break;
 
                 // case "/treatment":
-                //     document.title = "Khám bệnh - " + "Việt Hưng";
+                //     document.title = "Liệu trình chữa bệnh - " + "Việt Hưng";
                 //     break;
 
                 // case "/products":

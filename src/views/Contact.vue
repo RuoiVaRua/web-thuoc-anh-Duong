@@ -52,8 +52,8 @@
             <div class="email-us">
                 <h2 class="title">Gửi Email Cho Chúng Tôi</h2>
 
-                <p class="description">Hãy liên hệ qua email để chúng tôi có thể tư vấn trực tiếp cho bạn về sản phẩm và dịch vụ bạn quan tâm. 
-                    <br>Chúng tôi luôn sẵn lòng lắng nghe và hỗ trợ bạn.
+                <p class="description">Quý khách có thể liên hệ qua email để chúng tôi tư vấn trực tiếp với quý khách về sản phẩm và dịch vụ quan tâm. 
+                    <br>Chúng tôi luôn sẵn lòng lắng nghe và hỗ trợ quý khách.
                 </p>
 
                 <div class="form">
@@ -121,7 +121,7 @@ export default {
                 emailjs.send(treatmentID, templateReceiveID, params)
                     .then(response => {
                         if (response.status === 200) {
-                            alert("Chân thành cảm ơn bạn đã góp ý cho chúng tôi.\nChúng tôi sẽ phản hồi trong thời gian sớm nhất");
+                            alert("Chân thành cảm ơn quý khách đã liên hệ với chúng tôi.\nChúng tôi sẽ phản hồi trong thời gian sớm nhất");
 
                             // const paramsResponse = {
                             //     from_name: "Việt Hưng",

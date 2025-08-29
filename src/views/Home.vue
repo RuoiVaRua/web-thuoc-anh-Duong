@@ -3,9 +3,18 @@
 
     <div class="general-introduction">
         <div class="title-container">
-            <h2 class="title">Về Chúng Tôi</h2>
+            <h2 class="title">Chào mừng quý khách đến với Việt Hưng!</h2>
         </div>
-        <div class="description">Công ty Dược liệu Việt Hưng là một đơn vị uy tín chuyên cung cấp các sản phẩm dược liệu tự nhiên chất lượng cao, bao gồm thuốc đông y, dược liệu và trà thảo mộc. Với sứ mệnh mang đến cho cộng đồng những giải pháp chăm sóc sức khỏe an toàn, hiệu quả từ thiên nhiên, Việt Hưng luôn cam kết tuyển chọn nguyên liệu tinh túy nhất từ các vùng trồng dược liệu truyền thống, kết hợp với quy trình sản xuất hiện đại đạt chuẩn. Công ty tự hào mang đến cho khách hàng những sản phẩm dược liệu an toàn, lành tính, giúp phòng ngừa và điều trị bệnh tật, nâng cao sức khỏe và cải thiện chất lượng cuộc sống.</div>
+        <p class="description">
+Chúng tôi là đơn vị tiên phong trong lĩnh vực chữa bệnh bằng y học cổ truyền, chuyên sâu vào các liệu trình điều trị hiệu quả cho các bệnh: 
+<br/>tai biến, trào ngược dạ dày, mồ hôi tay chân, liệt dây thần kinh số 7, và bệnh trĩ, ...
+<br/>
+Với kinh nghiệm lâu năm cùng đội ngũ chuyên gia tận tâm, chúng tôi cam kết mang đến những giải pháp an toàn và bền vững, giúp quý khách hàng phục hồi sức khỏe từ gốc rễ.
+<br/>
+Sự tin tưởng và hài lòng của khách hàng chính là minh chứng rõ ràng nhất cho uy tín và chất lượng của Việt Hưng. 
+<br/>
+Chúng tôi tự tin sẽ đồng hành cùng quý khách trên hành trình tìm lại cuộc sống khỏe mạnh, trọn vẹn.
+        </p>
         <!-- <router-link to="/about">
             <button class="show-more">
                 Xem Thêm
@@ -81,6 +90,9 @@ export default {
         .description {
             font-weight: 700;
             line-height: 28px;
+            text-align: left;
+            max-width: 1024px;
+            white-space: unset;
 
             @media only screen and (max-width: 575px) {
                 padding: 0 10px;

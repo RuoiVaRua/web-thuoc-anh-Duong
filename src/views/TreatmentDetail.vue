@@ -14,7 +14,7 @@
                     :href="'https://zalo.me/' + zalo"
                     target="_blank"
                 >
-                    Liên Hệ Tư Vấn
+                    Liên Hệ Để Nhận Tư Vấn
                 </a>
                 <div class="social-media-sharing"></div>
             </div>
@@ -185,7 +185,7 @@ export default {
                 border: 1px solid var(--second-green);
                 color: var(--second-green);
                 display: block;
-                max-width: 200px;   
+                max-width: 250px;   
                 transition: all 0.4s ease;  
 
                 @media only screen and (max-width: 500px) {
@@ -222,7 +222,7 @@ export default {
     .treatment-description {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: var(--gap-30);
 
         .describe {

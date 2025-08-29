@@ -1,7 +1,7 @@
 <template>
     <div class="treatments-list">
 		<div class="treatment-header-container">
-			<h2 class="treatment-header">Dịch vụ khám chữa bệnh</h2>
+			<h2 class="treatment-header">Liệu trình khám chữa bệnh</h2>
 		</div>
         <div class="treatment-items">
             <div
