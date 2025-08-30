@@ -55,7 +55,7 @@ export default {
         // Sử dụng computed để lấy treatment theo id
         const treatment = computed(() => store.getters.getTreatmentById(treatmentId.value));
 
-        const treatmentIds = ['benh-tri', 'liet-day-than-kinh-so-7'];
+        const treatmentIds = ['benh-tri', 'liet-day-than-kinh-so-7', 'mo-hoi-tay-chan', 'trao-nguoc-da-day', 'tang-can-tu-nhien', 'phong-ngua-tai-bien'];
 
         const imageAndDescription = ref(null);
         const treatmentListRef = ref(null);
@@ -86,6 +86,10 @@ export default {
                     });
                     
                     treatment.value.treatments.forEach(value => {
+                        treatmentListRef.value.innerHTML += `<li>${value}</li>`;
+                    });
+                    
+                    treatment.value.treatmentTime.forEach(value => {
                         treatmentListRef.value.innerHTML += `<li>${value}</li>`;
                     });
                 } else if (!treatmentIds.includes(treatmentId.value)) {
@@ -276,6 +280,7 @@ export default {
         }
 
         .images-and-descriptions {
+            width: 100%;
             display: flex;
             flex-direction: column;
             // align-items: center;
