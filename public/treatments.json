@@ -186,5 +186,44 @@
 			"✅ Bài tập vận động nhẹ nhàng giúp cơ thể săn chắc, không tích mỡ xấu.",
 			"✅ Theo dõi, đồng hành xuyên suốt để điều chỉnh kịp thời."
 		]
+    },
+    {
+        "id": "phong-ngua-tai-bien",
+        "name": "Liệu Trình Phòng Ngừa Tai Biến, Đột Quỵ Bằng Y Học Cổ Truyền",
+        "images": [
+            "/images/TAI BIẾN MẠCH MÁU NÃO/tai-bien-mach-mau-nao.jpg",
+			"/images/TAI BIẾN MẠCH MÁU NÃO/tai-bien-mach-mau-nao-2.jpg",
+            "/images/TAI BIẾN MẠCH MÁU NÃO/tai-bien-mach-mau-nao-1.jpg",
+            "/images/TAI BIẾN MẠCH MÁU NÃO/tai-bien-mach-mau-nao-3.webp",
+            "/images/TAI BIẾN MẠCH MÁU NÃO/tai-bien-mach-mau-nao-4.jpg"
+        ],
+        "generalInfor": [
+			"👉 Tai biến mạch máu não (đột quỵ) đang ngày càng trẻ hóa và trở thành “kẻ giết người thầm lặng”, để lại nhiều hậu quả nặng nề cho sức khỏe và cuộc sống. ",
+			"Phòng ngừa sớm chính là chìa khóa để bảo vệ bạn và gia đình."
+        ],
+        "descriptions": [
+			"<h3>🔶 Đối tượng nên tham gia",
+			"<ul><li>Người có tiền sử <b>cao huyết áp, mỡ máu, tiểu đường, áp huyết thấp, người hàn lạnh.</b></li><li>Người có dấu hiệu <b>đau đầu, chóng mặt, tê bì tay chân, hay quên.</b></li><li>Người có tiền sử gia đình từng bị tai biến, đột quỵ.</li><li>Nhân viên văn phòng, người làm việc căng thẳng, ít vận động.</li></ul>",
+			"img",
+			"<h3>🔶 Ưu điểm của liệu trình</h3>",
+			"<ul><li><b>An toàn, lành tính</b> nhờ sử dụng thảo dược Đông y.</li><li><b>Cá nhân hóa phác đồ:</b> Mỗi khách hàng sẽ được thăm khám và thiết kế bài thuốc – phương pháp trị liệu riêng.</li><li><b>Ngăn ngừa biến chứng</b> hiệu quả, giúp duy trì huyết áp ổn định, trí nhớ minh mẫn, vận động dẻo dai.</li><li><b>Chăm sóc toàn diện:</b> Kết hợp thuốc thảo dược, châm cứu – bấm huyệt, chế độ dinh dưỡng và tập luyện.</li></ul>",
+			"img",
+			"<h3>🔶 Kết quả đạt được</h3>",
+			"<ul><li>✔ Giảm nguy cơ đột quỵ, tai biến rõ rệt.</li><li>✔ Sức khỏe tim mạch – huyết áp ổn định hơn.</li><li>✔ Cơ thể nhẹ nhàng, tinh thần minh mẫn, giấc ngủ ngon.</li><li>✔ Nâng cao chất lượng sống, an tâm cho cả gia đình.</li></ul>",
+			"img",
+			"<h3>Đăng ký tư vấn</h3>",
+			"👉 <b>Hãy chủ động phòng ngừa ngay hôm nay – Đừng để đến khi quá muộn!</b>",
+			"<a href='tel:0817790401' target='_blank'><b>📞 Hotline: 081.779.0401</b></a>",
+			"<a href='mailto:nhanqua839@gmail.com' target='_blank'><b>📧 Email: nhanqua839@gmail.com</b></a>",
+			"img"
+        ],
+		"treatmentTitle": "Giới thiệu liệu trình:",
+		"treatmentDesc": "Liệu trình phòng tai biến, đột quỵ của chúng tôi được xây dựng dựa trên <b>nguyên tắc Đông – Tây y kết hợp</b>, tập trung vào:",
+		"treatments": [
+			"✅ <b>Điều hòa khí huyết:</b> Giúp lưu thông máu tốt, giảm tình trạng tắc nghẽn mạch máu.",
+			"✅ <b>Ổn định huyết áp – mỡ máu – đường huyết:</b> Kiểm soát các yếu tố nguy cơ hàng đầu gây đột quỵ.",
+			"✅ <b>Bồi bổ tim, gan, thận:</b> Tăng cường sức khỏe tổng thể, nâng cao khả năng phòng bệnh.",
+			"✅ <b>Thải độc, giảm stress:</b> Giúp tinh thần thư thái, giấc ngủ sâu, tăng cường sức đề kháng."
+		]
     }
 ]
