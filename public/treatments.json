@@ -1,7 +1,7 @@
 [
     {
         "id": "benh-tri",
-        "name": "Liệu Trình Chữa Bệnh Trĩ Bằng Y Học Cổ Truyền – An Toàn & Hiệu Quả Từ Gốc",
+        "name": "Liệu Trình Chữa Bệnh Trĩ Bằng Y Học Cổ Truyền – An Toàn & Hiệu Quả",
         "images": [
             "/images/BỆNH TRĨ/benh-tri.jpg",
 			"/images/BỆNH TRĨ/benh-tri-6.webp",
@@ -9,17 +9,22 @@
             "/images/BỆNH TRĨ/benh-tri-3.png"
         ],
         "generalInfor": [
-			"Tổng quan về bệnh trĩ:",
+			"<b>Tổng quan về bệnh trĩ:</b>",
 			"Bệnh trĩ là một trong những bệnh lý phổ biến nhất hiện nay, gây ra nhiều phiền toái như: đau rát, chảy máu, sa búi trĩ và ảnh hưởng nghiêm trọng đến sinh hoạt hàng ngày.",
 			"Nhiều người chỉ điều trị triệu chứng nên bệnh dễ tái phát và ngày càng nặng hơn."
         ],
         "descriptions": [
-			"<h3>Hiệu quả đạt được</h3>\n<p>Sau 2 – 4 tuần, đa số người bệnh ghi nhận: </p>\n<ul><li>Đi ngoài dễ dàng, không còn cảm giác đau rát.</li><li>Búi trĩ co nhỏ dần, tình trạng chảy máu giảm rõ rệt.</li><li>Cơ thể nhẹ nhõm, ăn uống ngon miệng, giấc ngủ được cải thiện.</li></ul>",
+			"<h3>Hiệu quả đạt được</h3>",
+			"<p>Sau 2 – 4 tuần, đa số người bệnh ghi nhận: </p>",
+			"<ul><li>Đi ngoài dễ dàng, không còn cảm giác đau rát.</li><li>Búi trĩ co nhỏ dần, tình trạng chảy máu giảm rõ rệt.</li><li>Cơ thể nhẹ nhõm, ăn uống ngon miệng, giấc ngủ được cải thiện.</li></ul>",
 			"img",
-			"<h3>Vì sao nên chọn liệu trình của chúng tôi?</h3>\n<ul><li>Phác đồ cá nhân hóa, phù hợp với từng tình trạng bệnh.</li><li>Kết hợp giữa <b>bài thuốc uống, thuốc đắp và chế độ ăn uống sinh hoạt hợp lý</b>.</li><li>Được theo dõi, hỗ trợ trong suốt quá trình điều trị.</li></ul>",
+			"<h3>Vì sao nên chọn liệu trình của chúng tôi?</h3>",
+			"<ul><li>Phác đồ cá nhân hóa, phù hợp với từng tình trạng bệnh.</li><li>Kết hợp giữa <b>bài thuốc uống, thuốc đắp và chế độ ăn uống sinh hoạt hợp lý</b>.</li><li>Được theo dõi, hỗ trợ trong suốt quá trình điều trị.</li></ul>",
 			"img",
-			"<h3>Đăng ký tư vấn</h3>\n<p>👉 Đừng để bệnh trĩ làm ảnh hưởng đến chất lượng cuộc sống. Hãy liên hệ với chúng tôi để được tư vấn miễn phí và lựa chọn liệu trình phù hợp nhất cho bạn.</p>",
-			"<a href='tel:0817790401' target='_blank'><b>📞 Hotline: 081.779.0401</b></a>\n<a href='mailto:nhanqua839@gmail.com' target='_blank'><b>📧 Email: nhanqua839@gmail.com</b></a>",
+			"<h3>Đăng ký tư vấn</h3>",
+			"<p>👉 Đừng để bệnh trĩ làm ảnh hưởng đến chất lượng cuộc sống. \nHãy liên hệ với chúng tôi để được <b>tư vấn miễn phí</b> và lựa chọn liệu trình phù hợp nhất cho bạn.</p>",
+			"<a href='tel:0817790401' target='_blank'><b>📞 Hotline: 081.779.0401</b></a>",
+			"<a href='mailto:nhanqua839@gmail.com' target='_blank'><b>📧 Email: nhanqua839@gmail.com</b></a>",
 			"img"
         ],
 		"treatmentTitle": "Phương pháp Đông y trong điều trị trĩ",
@@ -41,17 +46,20 @@
             "/images/LIỆT DÂY THẦN KINH SỐ 7/liet-day-than-kinh-so-7 3.webp"			
         ],
         "generalInfor": [
-			"Tổng quan về liệt dây thần kinh số 7:",
-			"Liệt dây thần kinh số 7 ngoại biên (liệt mặt, méo miệng, nhắm mắt không kín…) là tình trạng nhiều người gặp phải sau cảm lạnh, nhiễm virus, hoặc do rối loạn tuần hoàn não.",
+			"<b>Liệt dây thần kinh số 7 ngoại biên (liệt mặt, méo miệng, nhắm mắt không kín…)</b> là tình trạng nhiều người gặp phải sau cảm lạnh, nhiễm virus, hoặc do rối loạn tuần hoàn não.",
 			"Bệnh không chỉ ảnh hưởng đến thẩm mỹ khuôn mặt mà còn tác động lớn đến tâm lý và chất lượng cuộc sống của người bệnh."
         ],
         "descriptions": [
-			"<h3>Đối tượng nên áp dụng liệu trình</h3>\n<ul><li>Người mới khởi phát liệt mặt (dưới 2 tuần).</li><li>Người bị liệt lâu ngày nhưng muốn phục hồi chức năng cơ mặt.</li><li>Người có nguy cơ tái phát do suy nhược, cảm lạnh, stress kéo dài.</li></ul>",
+			"<h3>Đối tượng nên áp dụng liệu trình</h3>",
+			"<ul><li>Người mới khởi phát liệt mặt (dưới 2 tuần).</li><li>Người bị liệt lâu ngày nhưng muốn phục hồi chức năng cơ mặt.</li><li>Người có nguy cơ tái phát do suy nhược, cảm lạnh, stress kéo dài.</li></ul>",
 			"img",
-			"<h3>Quy trình trị liệu</h3>\n<ol><li>Thăm khám – tư vấn cá nhân hóa.</li><li>Điều trị kết hợp châm cứu, bấm huyệt, thuốc thảo dược.</li><li>Hướng dẫn bài tập phục hồi tại nhà.</li><li>Theo dõi tiến triển và điều chỉnh liệu trình</li></ol>",
+			"<h3>Quy trình trị liệu</h3>",
+			"<ol><li>Thăm khám – tư vấn cá nhân hóa.</li><li>Điều trị kết hợp châm cứu, bấm huyệt, thuốc thảo dược.</li><li>Hướng dẫn bài tập phục hồi tại nhà.</li><li>Theo dõi tiến triển và điều chỉnh liệu trình.</li></ol>",
 			"img",
-			"<h3>Đăng ký tư vấn</h3>\n<p>👉 <b>Đừng để liệt dây thần kinh số 7 ảnh hưởng lâu dài đến khuôn mặt và cuộc sống của bạn.</b>Hãy liên hệ ngay với chúng tôi để được thăm khám và trải nghiệm <b>liệu trình phục hồi an toàn – hiệu quả – bền vững.</b></p>",
-			"<a href='tel:0817790401' target='_blank'><b>📞 Hotline: 081.779.0401</b></a>\n<a href='mailto:nhanqua839@gmail.com' target='_blank'><b>📧 Email: nhanqua839@gmail.com</b></a>",
+			"<h3>Đăng ký tư vấn</h3>",
+			"<p>👉 <b>Đừng để liệt dây thần kinh số 7 ảnh hưởng lâu dài đến khuôn mặt và cuộc sống của bạn.</b>\nHãy liên hệ ngay với chúng tôi để được thăm khám và trải nghiệm <b>liệu trình phục hồi an toàn – hiệu quả – bền vững.</b></p>",
+			"<a href='tel:0817790401' target='_blank'><b>📞 Hotline: 081.779.0401</b></a>",
+			"<a href='mailto:nhanqua839@gmail.com' target='_blank'><b>📧 Email: nhanqua839@gmail.com</b></a>",
 			"img"
         ],
 		"treatmentTitle": "Tại sao nên chọn liệu trình của chúng tôi?",
@@ -62,6 +70,50 @@
 			"✅ <b>Thuốc thảo dược:</b> Hỗ trợ phục hồi từ bên trong, nâng cao sức đề kháng, giảm tái phát.",
 			"✅ <b>Hiệu quả rõ rệt:</b> Nhiều bệnh nhân cải thiện từ 70–90% chỉ sau 2–4 tuần trị liệu.",
 			"✅ <b>Không tác dụng phụ:</b> Liệu trình áp dụng hoàn toàn bằng y học cổ truyền, an toàn với mọi lứa tuổi."
+		]
+    },
+    {
+        "id": "mo-hoi-tay-chan",
+        "name": "Liệu Trình Chữa Mồ Hôi Tay Chân – Giải Pháp An Toàn & Hiệu Quả",
+        "images": [
+            "/images/MỒ HÔI TAY CHÂN/mo-hoi-tay-chan.jpg",
+			"/images/MỒ HÔI TAY CHÂN/mo-hoi-tay-chan-2.webp",
+            "/images/MỒ HÔI TAY CHÂN/mo-hoi-tay-chan-3.jpg",
+            "/images/MỒ HÔI TAY CHÂN/mo-hoi-tay-chan-4.jpg",
+            "/images/MỒ HÔI TAY CHÂN/mo-hoi-tay-chan-1.jpg"			
+        ],
+        "generalInfor": [
+			"Bạn có biết? <b>Hơn 3% dân số đang phải sống chung với chứng tăng tiết mồ hôi tay chân</b>, gây khó khăn trong sinh hoạt, công việc và giao tiếp hằng ngày. \nĐôi bàn tay luôn ướt át, bàn chân đẫm mồ hôi không chỉ tạo cảm giác khó chịu mà còn khiến bạn mất tự tin trước người khác.",
+			"💡 Tin vui là, tình trạng này <b>hoàn toàn có thể khắc phục nhờ liệu trình chữa mồ hôi tay chân bằng Y học cổ truyền</b> – an toàn, không xâm lấn, hiệu quả lâu dài."
+        ],
+        "descriptions": [
+			"<h3>🔎 Nguyên Nhân Theo Y Học Cổ Truyền</h3>",
+			"<p>Trong Đông y, mồ hôi tay chân thường do:</p>",
+			"<ul><li>Rối loạn điều hòa khí huyết.</li><li>Tỳ vị hư yếu, cơ thể mất cân bằng âm dương.</li><li>Căng thẳng thần kinh, lao lực kéo dài.</li></ul>",
+			"<p>Vì vậy, muốn điều trị dứt điểm cần <b>khôi phục sự cân bằng trong cơ thể</b>, chứ không chỉ ngăn mồ hôi tạm thời.</p>",
+			"img",
+			"<h3>🎯 Ưu Điểm Nổi Bật</h3>",
+			"<ul><li>An toàn, không tác dụng phụ.</li><li>Hiệu quả lâu dài, hạn chế tái phát.</li><li>Phù hợp cả người lớn và thanh thiếu niên.</li><li>Hỗ trợ cải thiện sức khỏe toàn diện.</li></ul>",
+			"img",
+			"<h3>🌟 Ai Nên Tham Gia Liệu Trình?</h3>",
+			"<ul><li>Người thường xuyên <b>ra mồ hôi tay</b>, khó bắt tay, khó cầm nắm.</li><li>Người bị <b>mồ hôi chân nhiều</b>, gây mùi, làm ẩm giày dép.</li><li>Người từng thử nhiều cách nhưng không hiệu quả, lo ngại phẫu thuật hoặc tiêm botox.</li></ul>",
+			"img",
+			"<h3>Đăng ký tư vấn</h3>",
+			"<p>👉 <b>Đừng để những giọt mồ hôi cản trở sự tự tin của bạn!</b> \nHãy đăng ký ngay liệu trình chữa mồ hôi tay chân tại Y Học Cổ Truyền Việt Hưng để được tư vấn chi tiết và trải nghiệm phương pháp điều trị an toàn – hiệu quả – bền vững.</p>",
+			"<a href='tel:0817790401' target='_blank'><b>📞 Hotline: 081.779.0401</b></a>",
+			"<a href='mailto:nhanqua839@gmail.com' target='_blank'><b>📧 Email: nhanqua839@gmail.com</b></a>",
+			"img"
+        ],
+		"treatmentTitle": "Liệu Trình Điều Trị",
+		"treatmentDesc": "Liệu trình chữa mồ hôi tay chân tại phòng khám được thiết kế cá nhân hóa cho từng bệnh nhân, bao gồm:",
+		"treatments": [
+			"✅ <b>Uống thuốc thảo dược</b> – Giúp điều hòa tỳ vị, bổ khí huyết, ổn định hệ thần kinh thực vật.",
+			"✅ <b>Châm cứu – bấm huyệt</b> – Tác động trực tiếp lên huyệt vị điều hòa cơ chế tiết mồ hôi",
+			"✅ <b>Tư vấn chế độ ăn uống và tập luyện hợp lý</b>"
+		],
+		"treatmentTime": [
+			"👉 Thời gian liệu trình: từ <b>2 – 4 tuần</b> tùy mức độ.",
+			"👉 Kết quả: Giảm rõ rệt tình trạng mồ hôi, cơ thể khỏe khoắn, tinh thần thoải mái, tự tin hơn trong cuộc sống."
 		]
     }
 ]

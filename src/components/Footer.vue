@@ -3,16 +3,16 @@
         <footer class="footer">
             <div class="top-section">
                 <div class="company-information">
-                    <h3 class="title">Thông tin công ty</h3>
+                    <h3 class="title">Thông Tin Của Chúng Tôi</h3>
                     <div class="content">
-                        <p>Công ty Việt Hưng</p>
+                        <p>Y Học Cổ Truyền Việt Hưng</p>
                         <p>Địa chỉ: xã Thường Kiệt - huyện Yên Mỹ - tỉnh Hưng Yên</p>
                         <!-- <p>GPDKKD: 2700588366&nbsp; do Cục cảnh sát quản lý hành chính về trật tự xã hội&nbsp;cấp ngày 13/04/2021</p> -->
                         <p>Điện thoại: 033.358.1878 - 081.779.0401</p>
                         <p>Email : nhanqua839@gmail.com</p>
                     </div>
                 </div>
-                <div class="products">
+                <!-- <div class="products">
                     <h3 class="title">Thuốc Đông Y</h3>
                     <div class="content">
                         <ul>
@@ -43,7 +43,7 @@
                             </li>
                         </ul>                      
                     </div>
-                </div>
+                </div> -->
                 <div class="facebook">
                     <h3 class="title">@Facebook</h3>
                     <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61559208080017&tabs&width=300&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=229258992396994&lazy=true" width="300" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" ></iframe>

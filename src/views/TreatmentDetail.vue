@@ -7,7 +7,7 @@
             <div class="treatment-general-infor">
                 <h1 class="name">{{ treatment.name }}</h1>
                 <ul>
-                    <li v-for="info in treatment.generalInfor" :key="info">{{ info }}</li>
+                    <li v-for="info in treatment.generalInfor" :key="info" v-html="info"></li>
                 </ul>
                 <a
                     class="contact"
@@ -81,7 +81,7 @@ export default {
                             imageAndDescription.value.innerHTML += `<img alt="" src="${base_URL + treatment.value.images[imgInd+1]}" />`;
                             imgInd++;
                         } else {
-                            imageAndDescription.value.innerHTML += `<p>${value}</p>`;
+                            imageAndDescription.value.innerHTML += `${value}`;
                         }
                     });
                     
