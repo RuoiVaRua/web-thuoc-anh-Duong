@@ -55,7 +55,7 @@ export default {
         // Sử dụng computed để lấy treatment theo id
         const treatment = computed(() => store.getters.getTreatmentById(treatmentId.value));
 
-        const treatmentIds = ['benh-tri'];
+        const treatmentIds = ['benh-tri', 'liet-day-than-kinh-so-7'];
 
         const imageAndDescription = ref(null);
         const treatmentListRef = ref(null);
