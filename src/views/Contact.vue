@@ -283,6 +283,7 @@ export default {
                     height: 40px;
                     padding: 5px;
                     box-shadow: none;
+                    transition: all .3s ease;
                     -webkit-transition: all .3s ease;
                     -moz-transition: all .3s ease;
                     -ms-transition: all .3s ease;
@@ -319,6 +320,7 @@ export default {
                 text-shadow: none;
                 text-transform: capitalize;
                 white-space: nowrap;
+                transition: all .3s ease;
                 -webkit-transition: all .3s ease;
                 -moz-transition: all .3s ease;
                 -ms-transition: all .3s ease;

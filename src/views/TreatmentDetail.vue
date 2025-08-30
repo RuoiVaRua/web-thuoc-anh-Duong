@@ -19,7 +19,8 @@
                 <div class="social-media-sharing"></div>
             </div>
         </div>
-        <ol class="treatment-description" ref="treatmentDescription"></ol>
+
+        <ol class="treatment-description" ref="treatmentListRef"></ol>
         <div class="treatment-description">
             <div class="describe"><h3>Mô Tả Bệnh</h3></div>
             <!-- <p class="about-viet-hung">
@@ -57,20 +58,23 @@ export default {
         const treatmentIds = ['benh-tri'];
 
         const imageAndDescription = ref(null);
-        const treatmentDescription = ref(null);
+        const treatmentListRef = ref(null);
 
         const updateImageAndDescription = () => {    
             nextTick(() => { 
                 if (
                     imageAndDescription.value && 
-                    treatmentDescription.value && 
+                    treatmentListRef.value && 
                     treatment.value?.descriptions?.length && 
                     treatment.value?.treatments?.length
                 ) {
                     let imgInd = 0;
 
                     imageAndDescription.value.innerHTML = '';
-                    treatmentDescription.value.innerHTML = '<h4>Phương pháp điều trị bằng y học cổ truyền</h4>';
+                    treatmentListRef.value.innerHTML = treatment.value.treatmentDesc
+                        ? `<h3>${treatment.value.treatmentTitle}</h3>
+                           <p>${treatment.value.treatmentDesc}</p>`
+                        : `<h4>${treatment.value.treatmentTitle}</h4>`;
 
                     treatment.value.descriptions.forEach(value => {
                         if (value === 'img') {
@@ -82,7 +86,7 @@ export default {
                     });
                     
                     treatment.value.treatments.forEach(value => {
-                        treatmentDescription.value.innerHTML += `<li>${value}</li>`;
+                        treatmentListRef.value.innerHTML += `<li>${value}</li>`;
                     });
                 } else if (!treatmentIds.includes(treatmentId.value)) {
                     // Use router.push to navigate to the home page
@@ -106,7 +110,7 @@ export default {
         return {
             treatment,
             imageAndDescription,
-            treatmentDescription,
+            treatmentListRef,
             base_URL,
             zalo
         };
@@ -274,16 +278,25 @@ export default {
         .images-and-descriptions {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            gap: var(--gap-30);      
+            // align-items: center;
+            gap: var(--gap-15);   
+            
+            // & > *:not(img) {
+            //     width: 100%;
+            // }
             
             & > img {
                 max-height: 400px;
                 object-fit: contain;
+                margin: 0 auto;
             }
 
             p {
                 width: 100%;
+            }
+
+            ul {
+                list-style: disc;
             }
         }
     }
