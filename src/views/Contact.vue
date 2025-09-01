@@ -327,13 +327,13 @@ export default {
                 -o-transition: all .3s ease;
                 width: 200px;
                 border-radius: 0;
-                background: var(--second-green);
+                background: var(--second-blue);
                 color: #fff;
                 text-transform: uppercase;        
                 
                 &:hover {
-                    background: var(--second-green);
-                    border-color: var(--second-green);
+                    background: var(--second-blue);
+                    border-color: var(--second-blue);
                     text-shadow: none;
                     color: #fff;
                 }

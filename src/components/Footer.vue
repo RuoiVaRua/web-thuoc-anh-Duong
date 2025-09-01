@@ -183,7 +183,7 @@ export default {
                         }                        
 
                         &:hover {
-                            color: var(--second-green);
+                            color: var(--second-blue);
                             padding-left: 10px;
                             transition: all ease 0.4s;
                         }
@@ -302,7 +302,7 @@ export default {
             }
 
             .phone {
-                background-color: var(--main-green);
+                background-color: var(--main-blue);
             }
         }
     }

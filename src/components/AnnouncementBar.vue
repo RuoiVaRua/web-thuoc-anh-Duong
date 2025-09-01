@@ -92,7 +92,7 @@ export default {
             }               
 
             &::before {
-                background: var(--main-green);
+                background: var(--main-blue);
                 content: '';
                 position: absolute;
                 top: 0;
@@ -139,7 +139,7 @@ export default {
                 }                
 
                 &::before, &::after {
-                    background: var(--main-green);
+                    background: var(--main-blue);
                     width: calc(100% + 15px);
                     left: -15px;
                     content: '';

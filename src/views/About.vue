@@ -38,7 +38,7 @@ export default {
                 top: 50%;
                 left: 0;
                 transform: translateY(-50%);
-                background: linear-gradient(to right,rgba(255,255,255,.14) 0%,var(--main-green) 50%,var(--main-green) 53%,rgba(255,255,255,0) 100%);
+                background: linear-gradient(to right,rgba(255,255,255,.14) 0%,var(--main-blue) 50%,var(--main-blue) 53%,rgba(255,255,255,0) 100%);
                 background-size: auto;
                 width: 100%;
                 height: 2.5px;
@@ -50,7 +50,7 @@ export default {
                 display: inline-block;
                 padding: 0 20px !important;
                 background-color: #fff;
-                color: var(--main-green);
+                color: var(--main-blue);
                 text-transform: capitalize;
                 font-weight: 700;
                 line-height: 1.2;
@@ -59,8 +59,8 @@ export default {
 
         hr {
             height: 0;
-            background-color: var(--main-blue);
-            color: var(--main-blue);
+            background-color: var(--about-section-blue);
+            color: var(--about-section-blue);
             border: none;
             border-top: 2px solid;
             margin-top: 20px;

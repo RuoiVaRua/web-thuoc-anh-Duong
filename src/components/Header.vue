@@ -150,7 +150,7 @@ export default {
             top: 100%;            
             height: 5px;
             width: 100%;
-            background: rgba(0, 115, 56, 0.85);
+            background: var(--main-blue-opacity);
             visibility: visible;
             transform: translate3d(0px, 0px, 0px);
             // animation property order
@@ -278,13 +278,13 @@ export default {
                                 // left: 0;
                                 // top: 45px;
                                 // display: block;
-                                // background: var(--main-green);
+                                // background: var(--main-blue);
                                 transition: width 0.4s ease;
                             }
 
                             &.active.router-link-exact-active,
                             &:hover {
-                                color: var(--main-green);
+                                color: var(--main-blue);
                                 position: relative;
 
                                 &::before {
@@ -295,7 +295,7 @@ export default {
                                     left: 0;
                                     top: 40px;
                                     display: block;
-                                    background: var(--main-green);
+                                    background: var(--main-blue);
                                     transition: width 0.4s ease;
                                 }
                             }

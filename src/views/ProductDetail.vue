@@ -152,7 +152,7 @@ export default {
                 font-weight: 700;
                 text-transform: capitalize;
                 text-align: left;
-                color: var(--second-green);
+                color: var(--second-blue);
             }
 
             ul {
@@ -169,8 +169,8 @@ export default {
                 white-space: nowrap;
                 overflow: hidden;
                 text-align: center;
-                border: 1px solid var(--second-green);
-                color: var(--second-green);
+                border: 1px solid var(--second-blue);
+                color: var(--second-blue);
                 margin: 20px 0;
                 display: block;
                 max-width: 200px;   
@@ -181,7 +181,7 @@ export default {
                 }                        
                 
                 &:hover {
-                    background-color: var(--second-green);
+                    background-color: var(--second-blue);
                     color: #fff;
                 }
             }
@@ -215,7 +215,7 @@ export default {
 
             h3 {
                 width: fit-content;
-                color: var(--second-green);
+                color: var(--second-blue);
                 font-size: 1.71rem;
                 line-height: 1.7;
                 padding: 5px 0;
@@ -227,8 +227,8 @@ export default {
                 background-color: white;
 
                 &::before {
-                    background: var(--second-green);
-                    color: var(--second-green);
+                    background: var(--second-blue);
+                    color: var(--second-blue);
                     content: "";
                     width: calc(100% - 2em);
                     height: 2px;
